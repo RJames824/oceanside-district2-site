@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ricky James for Oceanside City Council 2026</title>
+<meta name="description" content="Ricky James is running for Oceanside City Council. A clean campaign focused on real solutions for homelessness on the San Luis Rey River Trail, preserving our eastern agricultural land, better parks, and bike lanes that actually work." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14160f;          /* dark olive-charcoal */
+    --bg-2:#1c1f15;
+    --bg-3:#0f110b;
+    --lime:#95FF00;        /* signature electric lime */
+    --lime-2:#7FD900;
+    --amber:#00FFF3;
+    --amber-2:#66FFF7;
+    --paper:#f3f4ec;       /* warm cream */
+    --paper-2:#fbfcf6;
+    --ink:#191c11;         /* near-black warm */
+    --ink-soft:#4c5142;
+    --line:rgba(25,28,17,0.12);
+    --line-lime:rgba(149,255,0,0.24);
+    --muted-dark:#c8ccb8;  /* body text on dark */
+    /* legacy aliases so existing markup keeps working */
+    --navy:#14160f;
+    --navy-2:#1c1f15;
+    --gold:#95FF00;
+    --gold-soft:rgba(149,255,0,0.16);
+    --paper-legacy:#f3f4ec;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Archivo','Segoe UI',Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px;}
+  .gold{color:var(--lime);}
+
+  /* Display type */
+  .hero h1,.section-head h2,.about h2,.pledge h2,.turnout h2,.give-note h3{
+    font-family:'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;
+    letter-spacing:.012em;line-height:1.0;
+  }
+
+  /* NAV */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(20,22,15,0.94);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line-lime);
+  }
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;letter-spacing:.04em;font-family:'Archivo';}
+  .brand .wave{font-size:1.3rem;}
+  .brand small{display:block;font-size:.62rem;font-weight:700;color:var(--lime);letter-spacing:.16em;text-transform:uppercase;}
+  nav ul{display:flex;flex-wrap:nowrap;align-items:center;gap:20px;list-style:none;}
+  nav li{flex:0 0 auto;}
+  nav a{color:#d7dcc9;font-size:.86rem;font-weight:600;white-space:nowrap;letter-spacing:.01em;transition:color .15s;}
+  nav a:hover{color:var(--lime);}
+  .nav-cta{background:var(--lime);color:var(--bg)!important;padding:9px 18px;font-weight:800;letter-spacing:.05em;
+    clip-path:polygon(9px 0,100% 0,calc(100% - 9px) 100%,0 100%);}
+  .nav-cta:hover{background:var(--amber);}
+  .menu-btn{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;}
+  .nav-ico{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;color:#d7dcc9;}
+  .nav-ico:hover{color:var(--lime);}
+  .nav-ico svg{width:20px;height:20px;flex:none;}
+  .nav-socials{display:inline-flex;align-items:center;gap:16px;flex:0 0 auto;}
+  footer .social a.footer-ico{display:inline-flex;align-items:center;gap:6px;}
+  footer .social a.footer-ico svg{width:20px;height:20px;}
+
+  /* HERO */
+  .hero{
+    position:relative;overflow:hidden;color:#fff;padding:96px 0 92px;
+    background-color:var(--bg);
+    background-image:
+      radial-gradient(1100px 460px at 82% -12%, rgba(149,255,0,.16), transparent 60%),
+      radial-gradient(rgba(149,255,0,.06) 1px, transparent 1px);
+    background-size:auto, 16px 16px;
+  }
+  .hero::before{
+    content:"'26";position:absolute;right:1%;top:2%;font-family:'Anton',sans-serif;
+    font-size:clamp(9rem,26vw,26rem);line-height:1;color:transparent;
+    -webkit-text-stroke:2px rgba(149,255,0,.13);pointer-events:none;z-index:0;user-select:none;
+  }
+  .hero .wrap{position:relative;z-index:2;}
+  .hero .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center;}
+  .hero .hero-photo{
+    aspect-ratio:4/5;border-radius:3px;overflow:hidden;position:relative;
+    border:2px solid var(--lime);box-shadow:0 0 0 4px var(--bg),0 0 0 7px rgba(0,255,243,.55),0 24px 60px rgba(0,0,0,.5);
+    background:linear-gradient(160deg,#20241a,#14160f);
+  }
+  .hero .hero-photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(.4) contrast(1.04);transition:filter .5s;}
+  .hero .hero-photo:hover img{filter:none;}
+  .hero .hero-col{display:flex;flex-direction:column;justify-content:center;}
+  .hero .hero-photo .ph-label{
+    position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;
+    text-align:center;padding:18px;color:rgba(255,255,255,.55);font-size:.8rem;
+    font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  }
+  .hero h1{font-size:clamp(2.6rem,6.4vw,5rem);line-height:.94;}
+  .hero h1 .accent{color:var(--lime);}
+  .hero .kicker{
+    display:inline-block;font-weight:800;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--bg);background:var(--lime);padding:9px 20px;margin-bottom:24px;
+    clip-path:polygon(9px 0,100% 0,calc(100% - 9px) 100%,0 100%);
+  }
+  .hero .slogan{font-size:1.15rem;font-weight:700;color:var(--lime);margin-top:16px;}
+  .hero-quote{margin-top:20px;text-align:center;color:var(--amber);font-weight:700;font-size:1.05rem;line-height:1.4;}
+  .hero p.lede{font-size:1.1rem;max-width:620px;margin:18px 0 32px;color:#e7ead9;}
+  .btns{display:flex;flex-wrap:wrap;gap:14px;}
+  .btn{
+    display:inline-block;font-family:'Archivo';padding:14px 28px;font-weight:800;font-size:.92rem;
+    letter-spacing:.05em;text-transform:uppercase;cursor:pointer;border:2px solid transparent;transition:all .15s;
+    clip-path:polygon(11px 0,100% 0,calc(100% - 11px) 100%,0 100%);
+  }
+  .btn-gold{background:var(--lime);color:var(--bg);}
+  .btn-gold:hover{background:var(--amber);color:var(--bg);transform:translateY(-1px);}
+  .btn-ghost{border-color:rgba(149,255,0,.55);color:var(--lime);}
+  .btn-ghost:hover{background:var(--lime);color:var(--bg);border-color:var(--lime);}
+
+  /* SECTIONS */
+  section{padding:82px 0;}
+  .section-head{text-align:center;max-width:720px;margin:0 auto 50px;}
+  .eyebrow{
+    display:inline-block;position:relative;font-size:.76rem;font-weight:800;letter-spacing:.2em;
+    text-transform:uppercase;color:#8a7310;padding-bottom:12px;
+  }
+  .eyebrow::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:48px;height:4px;background:linear-gradient(90deg,var(--lime),var(--amber));}
+  .section-head h2{font-size:clamp(1.9rem,4vw,3rem);color:var(--ink);margin:14px 0 14px;}
+  .section-head p{color:var(--ink-soft);font-size:1.05rem;}
+
+  /* ISSUES */
+  .issues{background:var(--paper-2);}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  .issue{
+    background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--lime);border-radius:4px;padding:30px 28px;
+    transition:transform .15s,box-shadow .15s;
+  }
+  .issue:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(25,28,17,.12);border-left-color:var(--amber);}
+  .issue .ic{font-size:2rem;margin-bottom:14px;display:block;}
+  .issue h3{font-family:'Archivo';font-weight:800;font-size:1.2rem;color:var(--ink);margin-bottom:8px;letter-spacing:.005em;}
+  .issue p{color:var(--ink-soft);font-size:.98rem;}
+  .issue.wide{grid-column:1/-1;}
+  .asset-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:8px 18px;margin-top:16px;}
+  .asset-list li{position:relative;padding-left:22px;color:var(--ink);font-weight:700;font-size:.93rem;}
+  .asset-list li::before{content:"\25B8";position:absolute;left:0;color:var(--lime-2);font-weight:800;}
+  @media (max-width:700px){ .asset-list{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:430px){ .asset-list{grid-template-columns:1fr;} }
+
+  /* PLEDGE BANNER */
+  .pledge{
+    color:#fff;background-color:var(--bg);
+    background-image:radial-gradient(rgba(149,255,0,.06) 1px, transparent 1px);background-size:16px 16px;
+    border-top:3px solid var(--lime);border-bottom:3px solid var(--lime);
+  }
+  .pledge .wrap{display:flex;gap:30px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center;}
+  .pledge .seal{font-size:3.4rem;}
+  .pledge h2{font-size:clamp(1.6rem,3.2vw,2.4rem);color:var(--lime);margin-bottom:10px;}
+  .pledge p{color:#dfe3d2;max-width:760px;margin-left:auto;margin-right:auto;}
+
+  /* TURNOUT */
+  .turnout{
+    color:#fff;text-align:center;padding:78px 0;background-color:var(--bg);
+    background-image:radial-gradient(rgba(149,255,0,.06) 1px, transparent 1px);background-size:16px 16px;
+  }
+  .turnout .eyebrow{color:var(--lime);}
+  .turnout .eyebrow::after{background:var(--amber);}
+  .turnout h2{color:#fff;font-size:clamp(1.7rem,3.4vw,2.5rem);margin:12px auto 10px;max-width:820px;line-height:1.02;}
+  .turnout h2 .gold{color:var(--lime);}
+  .turnout .t-lead{color:#d3d8c4;max-width:680px;margin:0 auto;font-size:1.05rem;}
+  .turnout-stats{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin:34px 0 28px;}
+  .tstat{background:rgba(149,255,0,.05);border:1px solid var(--line-lime);border-radius:4px;padding:24px 26px;min-width:200px;flex:1;max-width:260px;}
+  .tstat .n{font-family:'Anton',sans-serif;font-size:2.9rem;font-weight:400;color:var(--lime);line-height:1;}
+  .tstat .l{font-size:.86rem;color:#cbd0bd;margin-top:10px;line-height:1.4;}
+  .turnout .punch{font-size:1.2rem;font-weight:800;color:#fff;margin-top:4px;}
+  .turnout .punch .gold{color:var(--lime);}
+  .turnout .t-src{font-size:.76rem;color:#8b917c;margin-top:20px;}
+
+  /* ABOUT */
+  .about{background:var(--paper);}
+  .about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;align-items:center;}
+  .about .photo{
+    aspect-ratio:4/5;border-radius:4px;overflow:hidden;border:2px solid var(--lime);position:relative;
+    background:linear-gradient(160deg,#20241a,#14160f);
+    box-shadow:0 0 0 4px var(--paper),0 0 0 7px rgba(0,255,243,.5);
+  }
+  .about .photo img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.35) contrast(1.03);transition:filter .5s;}
+  .about .photo:hover img{filter:none;}
+  .about h2{font-size:clamp(1.9rem,3.6vw,2.7rem);color:var(--ink);margin-bottom:18px;}
+  .about p{color:var(--ink-soft);margin-bottom:14px;}
+  .about .sig{font-family:'Archivo';font-weight:800;color:var(--ink);margin-top:18px;font-size:1.05rem;}
+
+  /* DISTRICT */
+  .district{background:var(--paper-2);}
+  .district-map{max-width:940px;margin:0 auto;border-radius:4px;overflow:hidden;border:2px solid var(--lime);box-shadow:0 18px 50px rgba(25,28,17,.18),0 0 0 4px var(--paper-2),0 0 0 7px rgba(0,255,243,.5);}
+  .district-map img{display:block;width:100%;height:auto;}
+  .district-cap{text-align:center;color:var(--ink-soft);font-size:.85rem;margin-top:14px;}
+
+  /* GET INVOLVED / FORM (legacy) */
+  .involved{background:var(--paper-2);}
+  .form-card{max-width:680px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:40px 36px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .field{margin-bottom:18px;}
+  .field.full{grid-column:1/-1;}
+  label.fl{display:block;font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-bottom:7px;}
+  input,textarea,select{
+    width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:5px;
+    background:#fff;font-size:1rem;font-family:inherit;color:var(--ink);
+  }
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--lime-2);box-shadow:0 0 0 3px var(--gold-soft);}
+  .checks{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px;}
+  .chk{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:30px;padding:8px 14px;font-size:.9rem;cursor:pointer;}
+  .chk input{width:auto;}
+  .form-card .btn-gold{width:100%;border:none;font-size:1.05rem;margin-top:6px;}
+  .form-note{font-size:.82rem;color:var(--ink-soft);text-align:center;margin-top:14px;}
+  .form-intro{font-size:.95rem;color:var(--ink-soft);margin-bottom:20px;text-align:center;}
+  .or-divider{display:flex;align-items:center;text-align:center;color:#9aa088;font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin:22px 0;}
+  .or-divider::before,.or-divider::after{content:"";flex:1;height:1px;background:var(--line);}
+  .or-divider span{padding:0 14px;}
+  .success{display:none;background:var(--gold-soft);border:1px solid var(--lime);border-radius:6px;padding:16px;text-align:center;color:var(--ink);font-weight:800;margin-top:18px;}
+
+  /* FINANCE / TRANSPARENCY */
+  .finance{background:var(--paper);}
+  .finance .lead{max-width:760px;margin:0 auto 26px;text-align:center;color:var(--ink-soft);font-size:1.05rem;}
+  .netfile-cta{display:flex;justify-content:center;margin-bottom:40px;}
+  .netfile-cta a{
+    display:inline-flex;align-items:center;gap:10px;background:var(--bg);color:#fff;
+    padding:14px 26px;font-weight:800;font-size:.95rem;letter-spacing:.03em;border:2px solid var(--bg);transition:all .15s;
+    clip-path:polygon(11px 0,100% 0,calc(100% - 11px) 100%,0 100%);
+  }
+  .netfile-cta a:hover{background:var(--lime);color:var(--bg);border-color:var(--lime);}
+  .chart-card{max-width:820px;margin:0 auto;background:var(--paper-2);border:1px solid var(--line);border-top:4px solid var(--lime);border-radius:6px;padding:34px 30px;}
+  .chart-card h3{font-family:'Archivo';font-weight:800;color:var(--ink);font-size:1.2rem;margin-bottom:4px;}
+  .chart-card .sub{color:var(--ink-soft);font-size:.86rem;margin-bottom:18px;}
+  .live-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(127,217,0,.14);color:#3A6800;border:1px solid rgba(127,217,0,.5);border-radius:30px;padding:4px 12px;font-size:.74rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-bottom:18px;}
+  .live-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--lime-2);box-shadow:0 0 0 0 rgba(127,217,0,.6);animation:pulse 2s infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(127,217,0,.55);}70%{box-shadow:0 0 0 7px rgba(127,217,0,0);}100%{box-shadow:0 0 0 0 rgba(127,217,0,0);}}
+  .bar-row{margin-bottom:20px;}
+  .bar-row .bl{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;}
+  .bar-row .bl .who{font-weight:800;color:var(--ink);font-size:.95rem;}
+  .bar-row .bl .amt{font-family:'Archivo';font-weight:800;color:var(--ink);font-size:.98rem;}
+  .bar-track{background:rgba(25,28,17,.08);border-radius:3px;height:30px;overflow:hidden;}
+  .bar-fill{height:100%;border-radius:3px;display:flex;align-items:center;padding-left:12px;color:#fff;font-size:.78rem;font-weight:700;white-space:nowrap;}
+  .bar-fill.navy{background:linear-gradient(90deg,#14160f,#2c3320);}
+  .bar-fill.gold{background:var(--lime);color:var(--bg);}
+  .bar-fill.zero{background:transparent;color:var(--ink);padding-left:4px;}
+  .chart-source{font-size:.8rem;color:var(--ink-soft);margin-top:20px;border-top:1px solid var(--line);padding-top:16px;}
+  .chart-source a{color:#3A6800;text-decoration:underline;}
+  .bd-block{margin-top:26px;border-top:1px solid var(--line);padding-top:20px;}
+  .bd-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;gap:12px;}
+  .bd-head .t{font-family:'Archivo';font-weight:800;color:var(--ink);font-size:1rem;}
+  .bd-head .g{font-weight:800;color:var(--ink);white-space:nowrap;}
+  .bd-row{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.92rem;}
+  .bd-row .nm{color:var(--ink);}
+  .bd-row .nm .tag{display:inline-block;margin-left:6px;font-size:.68rem;font-weight:800;color:#006B64;background:rgba(0,255,243,.16);border:1px solid rgba(0,255,243,.5);border-radius:20px;padding:1px 8px;}
+  .bd-row .vv{font-weight:800;color:var(--ink);white-space:nowrap;}
+  .bd-row .nm .note{display:block;font-size:.74rem;color:var(--ink-soft);font-weight:400;margin-top:2px;}
+  .bd-row.other .nm{color:var(--ink-soft);font-style:italic;}
+  .bd-row.tot{border-bottom:none;border-top:2px solid var(--ink);margin-top:4px;}
+  .bd-grand{display:flex;justify-content:space-between;gap:14px;align-items:baseline;margin-top:20px;padding-top:16px;border-top:3px solid var(--lime);}
+  .bd-grand .nm{font-weight:800;color:var(--ink);font-size:1.05rem;}
+  .bd-grand .vv{font-family:'Archivo';font-weight:800;color:var(--ink);font-size:1.18rem;white-space:nowrap;}
+  .bd-row.tot .nm,.bd-row.tot .vv{color:var(--ink);font-weight:800;}
+  .bd-note{font-size:.8rem;color:var(--ink-soft);margin-top:10px;}
+  .pac-track{margin-top:26px;border-top:1px solid var(--line);padding-top:20px;}
+  .pac-track .t{font-family:'Archivo';font-weight:800;color:var(--ink);font-size:1rem;margin-bottom:6px;}
+  .pac-track p{font-size:.86rem;color:var(--ink-soft);}
+  .chart-card.history{margin-top:30px;border-top:4px solid var(--amber);}
+  .history-tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#006B64;margin-bottom:10px;}
+
+  /* GALLERY */
+  .gallery{background:var(--paper);}
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .gphoto{
+    position:relative;aspect-ratio:3/4;border-radius:4px;overflow:hidden;
+    border:1px solid var(--line);background:linear-gradient(160deg,#20241a,#14160f);
+  }
+  .gphoto img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05);transition:filter .45s,transform .55s;}
+  .gphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(149,255,0,.26),rgba(20,22,15,.45) 55%,rgba(0,255,243,.3));mix-blend-mode:multiply;pointer-events:none;transition:opacity .45s;}
+  .gphoto:hover img{filter:none;transform:scale(1.05);}
+  .gphoto:hover::after{opacity:0;}
+  .gphoto .ph-label{
+    position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;
+    padding:14px;color:rgba(255,255,255,.55);font-size:.72rem;font-weight:600;letter-spacing:.04em;
+  }
+  .gphoto .cap{
+    position:absolute;left:0;right:0;bottom:0;padding:18px 12px 10px;z-index:2;
+    background:linear-gradient(transparent,rgba(15,17,11,.9));
+    color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.02em;
+    border-top:2px solid var(--amber);
+  }
+  @media (max-width:760px){ .gallery-grid{grid-template-columns:repeat(2,1fr);} }
+
+  /* FOOTER */
+  footer{
+    background:var(--bg-3);color:#c8ccb8;padding:52px 0 30px;text-align:center;
+    background-image:radial-gradient(rgba(149,255,0,.05) 1px, transparent 1px);background-size:16px 16px;
+    border-top:3px solid var(--lime);
+  }
+  footer .brand{justify-content:center;margin-bottom:14px;}
+  footer .social{display:flex;flex-wrap:wrap;gap:12px 18px;justify-content:center;align-items:center;margin:18px 0;}
+  footer .social a{color:#c8ccb8;font-weight:600;font-size:.9rem;}
+  footer .social a:hover{color:var(--lime);}
+  .disclaimer{font-size:.78rem;color:#7f8570;max-width:620px;margin:18px auto 0;line-height:1.5;}
+  .tags{font-size:.82rem;color:var(--lime);margin-top:8px;letter-spacing:.04em;font-weight:700;}
+
+  .sms-box{max-width:420px;margin:26px auto 0;padding:20px 22px;border:1px solid var(--line-lime);border-radius:6px;background:rgba(149,255,0,.04);text-align:left;}
+  .sms-box p.sms-label{font-weight:800;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:var(--amber);margin-bottom:12px;text-align:center;}
+  .sms-box form{display:flex;flex-direction:column;gap:10px;}
+  .sms-box input[type=text],.sms-box input[type=tel]{
+    width:100%;padding:11px 14px;border-radius:4px;border:1px solid rgba(255,255,255,.18);
+    background:var(--bg-2);color:#fff;font-family:'Archivo';font-size:.92rem;
+  }
+  .sms-box input::placeholder{color:#8b8f7c;}
+  .sms-box .bot-field{position:absolute;left:-9999px;top:-9999px;}
+  .sms-box button{
+    background:var(--lime);color:var(--bg);font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+    font-size:.84rem;padding:11px 16px;border:none;border-radius:4px;cursor:pointer;transition:background .15s;
+  }
+  .sms-box button:hover{background:var(--amber);}
+  .sms-box .sms-fine{font-size:.72rem;color:#8b8f7c;line-height:1.5;margin-top:2px;}
+  .sms-box .sms-fine a{color:#a8ad96;text-decoration:underline;}
+  .sms-box .sms-consent{display:flex;align-items:flex-start;gap:10px;cursor:pointer;}
+  .sms-box .sms-consent input[type=checkbox]{
+    appearance:none;-webkit-appearance:none;flex:0 0 18px;width:18px;height:18px;margin-top:2px;
+    border:2px solid rgba(255,255,255,.35);border-radius:3px;background:var(--bg-2);cursor:pointer;position:relative;
+  }
+  .sms-box .sms-consent input[type=checkbox]:checked{background:var(--lime);border-color:var(--lime);}
+  .sms-box .sms-consent input[type=checkbox]:checked::after{
+    content:"";position:absolute;left:5px;top:1px;width:5px;height:10px;border:solid var(--bg);
+    border-width:0 2px 2px 0;transform:rotate(45deg);
+  }
+  .sms-box .sms-consent span{font-size:.76rem;line-height:1.5;color:#c8ccb8;}
+
+  @media (max-width:840px){
+    .grid{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;gap:28px;}
+    .about .photo{max-width:380px;margin:0 auto;}
+    .hero .hero-grid{grid-template-columns:1fr;gap:34px;}
+    .hero .hero-col{order:-1;max-width:360px;margin:0 auto;}
+  }
+  @media (max-width:960px){
+    nav ul{
+      display:none;position:absolute;top:64px;left:0;width:100%;flex-wrap:wrap;
+      flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line-lime);
+    }
+    nav ul.open{display:flex;}
+    nav li{border-top:1px solid rgba(255,255,255,.08);}
+    nav a{display:block;padding:14px 22px;}
+    .nav-cta{margin:12px 22px;text-align:center;}
+    .menu-btn{display:block;}
+    .form-row{grid-template-columns:1fr;}
+    nav li.nav-socials{display:flex;justify-content:center;gap:30px;padding:16px 22px;}
+    nav li.nav-socials a{display:inline-flex;padding:0;}
+    nav li.nav-socials a svg{width:26px;height:26px;}
+    footer .social{gap:14px 16px;}
+    footer .social a{font-size:.95rem;}
+    .wrap{padding:0 18px;}
+    .give-methods{grid-template-columns:1fr;}
+    .involve-pick{flex-direction:column;}
+  }
+
+  /* Get-involved: one-of-three picker (legacy) */
+  .involve-pick{display:flex;gap:12px;margin-top:6px;}
+  .pick-opt{flex:1;display:block;cursor:pointer;border:2px solid var(--line);border-radius:6px;
+    padding:14px 12px;text-align:center;transition:all .15s;background:#fff;}
+  .pick-opt input{display:none;}
+  .pick-opt .po-t{display:block;font-weight:800;color:var(--ink);font-size:1rem;}
+  .pick-opt .po-d{display:block;font-size:.78rem;color:var(--ink-soft);margin-top:3px;}
+  .pick-opt:hover{border-color:var(--lime-2);}
+  .pick-opt.sel{border-color:var(--lime);background:var(--gold-soft);}
+  .sub-block{display:none;}
+  .sub-block.show{display:block;}
+
+  /* Contribution methods box */
+  .give-box{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:18px;margin-bottom:6px;}
+  .give-box h4{color:var(--ink);font-size:1rem;margin-bottom:4px;}
+  .give-box .gb-sub{font-size:.86rem;color:var(--ink-soft);margin-bottom:14px;}
+  .give-methods{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .give-method{background:#fff;border:1px solid var(--line);border-radius:6px;padding:12px 14px;}
+  .give-method .gm-t{font-weight:800;color:var(--ink);font-size:.9rem;display:flex;align-items:center;gap:7px;}
+  .give-method .gm-v{font-weight:800;color:#6b7a12;font-size:1.02rem;margin-top:4px;word-break:break-word;}
+  .give-method .gm-give{display:inline-block;margin-top:6px;background:var(--lime);color:var(--bg);font-weight:800;
+    font-size:.92rem;padding:8px 16px;border-radius:5px;text-decoration:none;border:2px solid var(--lime);transition:all .15s;}
+  .give-method .gm-give:hover{background:transparent;color:#6b7a12;}
+  .give-method .gm-d{font-size:.8rem;color:var(--ink-soft);margin-top:4px;line-height:1.45;}
+  .give-fine{font-size:.76rem;color:var(--ink-soft);margin-top:12px;line-height:1.5;}
+  .amt-picker{margin:6px 0 18px;}
+  .amt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px;}
+  .amt{display:flex;align-items:center;justify-content:center;cursor:pointer;border:2px solid var(--line);
+    border-radius:6px;padding:11px 6px;font-weight:800;color:var(--ink);background:#fff;font-size:1rem;transition:all .15s;}
+  .amt input{display:none;}
+  .amt:hover{border-color:var(--lime-2);}
+  .amt.sel{border-color:var(--lime);background:var(--gold-soft);}
+  .amt-custom{display:none;align-items:center;gap:8px;margin-top:10px;}
+  .amt-custom.show{display:flex;}
+  .amt-custom span{font-weight:800;color:var(--ink);font-size:1.15rem;}
+  .amt-custom input{max-width:180px;}
+  .amt-hint{font-size:.84rem;color:var(--ink-soft);margin-top:11px;line-height:1.5;}
+  .amt-hint strong{color:#6b7a12;}
+  @media(max-width:520px){.amt-grid{grid-template-columns:repeat(2,1fr);}}
+
+  /* Contribution philosophy / salary-waiver card */
+  .give-note{background:linear-gradient(160deg,var(--bg),var(--bg-2));color:#e7ead9;
+    border-radius:8px;padding:34px 32px;margin-top:30px;border:1px solid var(--line-lime);}
+  .give-note .gn-eyebrow{font-size:.74rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--lime);}
+  .give-note h3{color:#fff;font-size:clamp(1.4rem,2.8vw,1.9rem);margin:8px 0 14px;line-height:1.02;}
+  .give-note p{font-size:1rem;line-height:1.65;margin-bottom:13px;color:#d6dac8;}
+  .give-note p .hl{color:var(--lime);font-weight:700;}
+  .waiver{background:rgba(149,255,0,0.08);border:1px solid rgba(149,255,0,.35);border-left:5px solid var(--lime);
+    border-radius:6px;padding:20px 22px;margin:20px 0 6px;}
+  .waiver .w-tag{display:inline-block;background:var(--lime);color:var(--bg);font-weight:800;font-size:.72rem;
+    letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:30px;margin-bottom:12px;}
+  .waiver h4{color:#fff;font-size:1.15rem;margin-bottom:10px;}
+  .waiver .w-figs{display:flex;flex-wrap:wrap;gap:14px;margin:14px 0;}
+  .waiver .w-fig{background:rgba(255,255,255,.05);border:1px solid rgba(149,255,0,.25);border-radius:6px;padding:12px 16px;flex:1;min-width:150px;}
+  .waiver .w-fig .wf-n{font-family:'Anton',sans-serif;font-size:1.7rem;font-weight:400;color:var(--lime);line-height:1;}
+  .waiver .w-fig .wf-l{font-size:.78rem;color:#cbd0bd;margin-top:6px;line-height:1.4;}
+  .letter-link{display:inline-flex;align-items:center;gap:8px;background:var(--lime);color:var(--bg)!important;
+    font-weight:800;padding:11px 20px;border-radius:5px;text-decoration:none;margin-top:8px;border:2px solid var(--lime);transition:all .15s;}
+  .letter-link:hover{background:transparent;color:var(--lime)!important;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span>RICKY JAMES<small>Oceanside City Council · District 2</small></span>
+    </a>
+    <nav>
+      <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+      <ul id="menu">
+        <li><a href="#about" onclick="closeMenu()">About</a></li>
+        <li><a href="#district" onclick="closeMenu()">District 2</a></li>
+        <li><a href="#gallery" onclick="closeMenu()">Oceanside</a></li>
+        <li><a href="#issues" onclick="closeMenu()">Priorities</a></li>
+        <li><a href="#pledge" onclick="closeMenu()">My Pledge</a></li>
+        <li><a href="#transparency" onclick="closeMenu()">Transparency</a></li>
+        <li class="nav-socials"><a class="nav-ico" href="https://www.instagram.com/rickyjamesoceanside/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></a><a class="nav-ico" href="https://www.facebook.com/RickyJamesOceanside/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="kicker">Oceanside City Council · District 2 · 2026</span>
+        <h1>This is home.<br><span class="accent">And it's worth fighting for.</span></h1>
+        <p class="lede">I'm Ricky James, and I'm running for Oceanside City Council in District 2. I hope you take the time to read my About Me, some of my Priorities, My Pledge and keep track of the financial contributions throughout this race. Feel free to reach out if you have any questions or want to support what this campaign is all about.</p>
+        <div class="btns">
+          <a class="btn btn-ghost" href="#issues">My Priorities</a>
+        </div>
+      </div>
+      <div class="hero-col">
+        <div class="hero-photo">
+          <img src="images/ricky-hero.jpg" alt="Ricky James">
+        </div>
+        <p class="hero-quote">&ldquo;Let's make Oceanside's potential a reality, together.&rdquo;</p>
+      </div>
+    </div>
+  </div>
+  <div class="wave-art" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style="width:100%;height:60px;">
+      <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,80 L0,80 Z" fill="#f7f9fc"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="photo">
+        <img src="images/ricky-family.jpg" alt="Ricky James with his family in Oceanside">
+      </div>
+      <div>
+        <div class="eyebrow">About Ricky</div>
+        <h2>Not the best resident. The best candidate.</h2>
+        <p>I am a 38 year old father, husband, son, brother. I was injured racing dirt bikes when I was 16 years old becoming a paraplegic. I have had to overcome some adversities in my life, but it has made me who I am today. I might not have dealt with them as I should have, but I am very grateful where my life has taken me. I now know I have the ability to serve my city in this capacity and there is no other motive other than being of service. I have not relied on a campaign manager, treasurer, or anybody to show me the ropes. I have worked very hard to figure out the system and it has been a great learning experience, something that I hope I can continue to do.</p>
+        <p>I'm not a career politician, and I won't pretend I'm the most qualified person in this city to sit on that dais. I'm not. But I am the best candidate this time. I take challenges head on and don't run from them because I can't run in the first place.</p>
+        <p>I identify as an Independent American because that's what I am. I didn't register Independent to hide anything. I'm not chasing both parties at the same time. I registered Independent because Oceanside City Council is a nonpartisan seat, and I intend to actually vote like it is, not carry water for a party, not chase endorsements from either side, and not let outside organizations or PACs tell me how to vote. I answer to District 2 residents.</p>
+        <p>I want this city to be the best possible city for young families to live in as well as compassionate to all seniors who love to live here even with the rising costs. We are a diversified city and no one should be left out. We will find solutions to make the potential of this city a reality if we work together.</p>
+        <p>Until November 3rd, I'll keep knocking on doors, keep showing up, and keep listening. This campaign isn't about me, it's about the neighbors who've stopped expecting City Hall to hear them. Let's make ourselves heard. Let's show how District 2 rolls.</p>
+        <p class="sig">&mdash; Ricky James</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISTRICT 2 -->
+<section class="district" id="district">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Your Neighborhood</div>
+      <h2>This is District 2</h2>
+      <p>North and northeast Oceanside &mdash; North Valley, Morro Hills, Guajome, Arrowood, and the San Luis Rey River corridor. If you live here, I'm running to represent <em>you</em>.</p>
+    </div>
+    <figure class="district-map">
+      <img src="images/district-2-map.jpg" alt="Map of Oceanside City Council District 2 highlighted in gold over an aerial view of north Oceanside" loading="lazy">
+    </figure>
+    <p class="district-cap">Oceanside City Council District 2 &mdash; adopted boundary (Finalist Map C).</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Out in Oceanside</div>
+      <h2>Living it, not just talking about it</h2>
+      <p>From the River Trail to the harbor to our kids' ballfields &mdash; this is the Oceanside I'm fighting for.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gphoto">
+        <img src="images/gallery-1.jpg" alt="Ricky handcycling on the San Luis Rey River Trail">
+        <div class="cap">On The River Trail</div>
+      </div>
+      <div class="gphoto">
+        <img src="images/gallery-2.jpg" alt="Ricky and his family at a San Diego Padres game">
+        <div class="cap">Family First</div>
+      </div>
+      <div class="gphoto">
+        <img src="images/gallery-3.jpg" alt="Ricky fishing off the Oceanside coast">
+        <div class="cap">Our Coast</div>
+      </div>
+      <div class="gphoto">
+        <img src="images/gallery-4.jpg" alt="Local kids with the Oceanside Fire Department">
+        <div class="cap">Our Neighborhoods</div>
+      </div>
+      <div class="gphoto">
+        <img src="images/gallery-5.jpg" alt="Ricky with kids at the Oceanside IronKids race">
+        <div class="cap">Oceanside IronKids</div>
+      </div>
+      <div class="gphoto">
+        <img src="images/gallery-6.jpg" alt="Ricky racing motocross">
+        <div class="cap">Racing Paralyzed At X Games</div>
+      </div>
+      <div class="gphoto">
+        <img src="images/gallery-7.jpg" alt="Ricky and his son at the beach">
+        <div class="cap">Beach Days</div>
+      </div>
+      <div class="gphoto">
+        <img src="images/gallery-8.jpg" alt="San Diego Sockers at Frontwave Arena in Oceanside">
+        <div class="cap">Frontwave Arena</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ISSUES -->
+<section class="issues" id="issues">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">My Priorities</div>
+      <h2>Some of my priorities for a better Oceanside</h2>
+      <p>Real problems deserve real solutions &mdash; not empty promises. Here's what I'll fight for on day one.</p>
+    </div>
+    <div class="grid">
+      <div class="issue">
+        <h3>Independent &mdash; Nonpartisan</h3>
+        <p>I don't intend to be the councilmember residents read about for the wrong reasons. No conflicts of interest, no backroom deals, no party loyalty tests &mdash; just steady, independent judgment on behalf of residents.</p>
+      </div>
+      <div class="issue">
+        <h3>Fiscal Discipline &mdash; No New Taxes</h3>
+        <p>The City's answer to years of budget strain is asking residents for a 0.5% sales tax increase. I think that's backwards &mdash; it hits young families and seniors on fixed incomes hardest, and it lets the City avoid fixing how it spends before asking residents for more.</p>
+      </div>
+      <div class="issue">
+        <h3>Reachable Councilmember</h3>
+        <p>Too many residents only hear from their councilmember at election time. I'll hold real office hours, show up where residents already are, and explain City decisions in plain language before they're made &mdash; not after.</p>
+      </div>
+      <div class="issue">
+        <h3>Smart Development</h3>
+        <p>I'm pro-growth &mdash; but growth that fits our roads, water, and services, not approvals rushed through because a developer asked first. The General Plan Update left South Morro Hills without its own Community Plan, and I'm committed to getting one established &mdash; so residents there have an actual, adopted plan for how the area grows, not decisions made project by project.</p>
+      </div>
+      <div class="issue wide">
+        <h3>Protect and promote the assets that set us apart</h3>
+        <p>No other North County coastal city has what we have. We should treat these as the competitive advantage they are &mdash; maintaining them, showcasing them, and building our identity and economy around them:</p>
+        <ul class="asset-list">
+          <li>Oceanside Harbor</li>
+          <li>The Pier</li>
+          <li>Municipal Airport</li>
+          <li>Municipal Golf Course</li>
+          <li>Direct access to Camp Pendleton</li>
+          <li>First &amp; last stop from Orange County</li>
+          <li>San Luis Rey River Trail</li>
+          <li>Playgrounds on the beach</li>
+          <li>Sprinter &amp; Coaster transit stations</li>
+          <li>Frontwave Arena</li>
+          <li>Closest beach access to Temecula</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLEAN CAMPAIGN PLEDGE -->
+<section class="pledge" id="pledge">
+  <div class="wrap">
+    <div>
+      <h2>My Pledge &mdash; A clean campaign</h2>
+      <p>Municipal politics should run on honest relationships and reasonable compromise that protects residents. My vow is simple: I won't solicit or accept money that comes with an agenda. That starts with developers seeking approvals and vendors chasing city contracts &mdash; but it doesn't end there. I'll hold the same hesitation toward activists, non-profit organizations, political parties, and PACs looking to advance an agenda through my seat. When I take my seat on the City Council, I'll answer to residents, not to whoever wrote the biggest check.</p>
+      <p>So how will I fund a campaign? With a strong message, efficiency, genuine relationships, and transparency &mdash; not a war chest. I want to stay as neutral and open-minded as possible, so I can offer the most rational and unbiased judgment on every decision that comes before me. I'll treat my campaign's finances the way I'll treat the City's: carefully, efficiently, and strategically. Money alone won't always solve a problem &mdash; motive, discernment, and honesty are more effective.</p>
+    </div>
+  </div>
+</section>
+
+<!-- A note from Ricky on contributions -->
+<section style="padding:34px 0 14px;">
+  <div class="wrap">
+    <div class="give-note" style="margin-top:0;">
+      <div class="gn-eyebrow">A note from Ricky</div>
+      <h3>Your time and your name mean more to me than your money</h3>
+      <p>I'm not asking for your money &mdash; I'm asking for your support. I hope to do what I set out to do on the strength of this community.</p>
+      <p>I wish giving could be anonymous, but the law requires it to be reported &mdash; just like my expenses. I <span class="hl">want</span> it that way. Transparency is the whole point.</p>
+      <p>If I ever recognize a contribution from a developer or anything that looks like a conflict of interest, I'll send it back so I can stay unbiased. And if <span class="hl">you</span> spot a possible conflict, please bring it to my attention so I can address it.</p>
+
+      <div class="waiver">
+        <span class="w-tag">Putting my money where my mouth is</span>
+        <h4>I've filed a Partial Salary Waiver with the City of Oceanside</h4>
+        <p>Pursuant to Article I.5, Section 2.1.70(d) of the Oceanside City Code and California Government Code Section 36516(f), I've formally notified the City Treasurer that I'm waiving part of my Council salary.</p>
+        <div class="w-figs">
+          <div class="w-fig"><div class="wf-n">$1,200<span style="font-size:.9rem;">/mo</span></div><div class="wf-l">the most I'll accept in total compensation</div></div>
+          <div class="w-fig"><div class="wf-n">~$2,152<span style="font-size:.9rem;">/mo</span></div><div class="wf-l">waived &amp; returned to the City's General Fund</div></div>
+        </div>
+        <p>Oceanside Council compensation runs about <strong style="color:#fff;">$3,352 a month</strong> &mdash; $2,802.49 in base salary, plus roughly $350 for Community Development Commission meetings and about $200 for Harbor District meetings. I'll keep no more than $1,200; the remaining <strong style="color:#fff;">~$2,152 every month</strong> goes, by law, to the General Fund for the City to use at its discretion.</p>
+        <a class="letter-link" href="Salary-Waiver-Letter.pdf" target="_blank" rel="noopener">Read the actual letter (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="finance" id="transparency">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Transparency</div>
+      <h2>Who's funding the District 2 race</h2>
+    </div>
+    <p class="lead">I believe you have a right to know who's funding the people who represent you. Every contribution to every Oceanside campaign is public record &mdash; and you can look it up yourself in seconds.</p>
+    <div class="netfile-cta">
+      <a href="https://efile.ci.oceanside.ca.us/public/search/campaign?query_string=&amp;state_id=&amp;start_date=2025-08-28&amp;end_date=2026-08-28&amp;filing_types=fppc400,fppc410,fppc425,fppc450,fppc460,fppc461,fppc465,fppc470,fppc496,fppc497,fppc497lcr,fppc497lcm,fppc501&amp;committee_types=Candidate%20or%20Officeholder,Primarily%20Formed%20Candidate,Primarily%20Formed%20Ballot%20Measure,General%20Purpose,Major%20Donor,Independent%20Expenditure,470%20Officeholder,470%20Person,Slate%20Mailer&amp;current_page=1&amp;page_size=10" target="_blank" rel="noopener">Look up any Oceanside campaign filing on the City's eFile system →</a>
+    </div>
+
+    <!--
+      ===========================================================================
+      460 TRACKER  -- sourced from the City of Oceanside eFile campaign
+      disclosure system (efile.ci.oceanside.ca.us). Bar width = (amount /
+      largest value) * 100; "zero"-style rows (small, self-funded candidates)
+      are shown at full width with no fill. Robinson 2022 is final/amended
+      and stays fixed. Figures last verified September 25, 2026.
+      ===========================================================================
+    -->
+    <!-- CARD A: live 2026 tracker -->
+    <div class="chart-card">
+      <div class="live-badge"><span class="dot"></span> Live tracker &middot; updated September 25, 2026</div>
+      <h3>The 2026 race &mdash; total raised since each campaign began</h3>
+      <div class="sub">District 2, City of Oceanside &middot; every committee opened at a different time, so these are full-campaign totals, not just this calendar year &mdash; contributions reported via the City's eFile system</div>
+
+      <div class="bar-row">
+        <div class="bl"><span class="who">Ricky James</span><span class="amt">$3,623</span></div>
+        <div class="bar-track"><div class="bar-fill gold" style="width:8%;">No PACs, No Developers, No Organizations, No Vendors, No Clubs. No Conflicts-of-Interest. Committee formed 2026.</div></div>
+      </div>
+
+      <div class="bar-row">
+        <div class="bl"><span class="who">Rick Robinson</span><span class="amt">$46,070</span></div>
+        <div class="bar-track"><div class="bar-fill navy" style="width:100%;">Re-Elect Rick Robinson City Council 2026 committee &mdash; raised since the committee formed 03/06/2025</div></div>
+      </div>
+
+      <div class="bar-row">
+        <div class="bl"><span class="who">Emily Gonzales</span><span class="amt">$18,514</span></div>
+        <div class="bar-track"><div class="bar-fill navy" style="width:40%;">Gonzales for Oceanside Council D2 2026 committee &mdash; raised since the committee formed 11/12/2025</div></div>
+      </div>
+
+      <!-- ROBINSON FULL-CAMPAIGN BREAKDOWN -- donor-by-donor from EVERY filing since the committee was formed 03/06/2025: 214600778 (01/01-06/30/25), 215505013 (07/01-12/31/25), 217118682 (01/01-06/30/26), 1050 (07/01-09/19/26) -->
+      <div class="bd-block">
+        <div class="bd-head"><span class="t">Rick Robinson &mdash; full-campaign breakdown, since 03/06/2025</span></div>
+        <div class="bd-row"><span class="nm">Howard Jacobs<span class="note">Principal, Oceanside-Nevada LP &mdash; 06/25/25</span></span><span class="vv">$5,000.00</span></div>
+        <div class="bd-row"><span class="nm">Fred Williamson<span class="note">Williamson Produce &mdash; 06/19/25</span></span><span class="vv">$3,000.00</span></div>
+        <div class="bd-row"><span class="nm">Peter Weiss for City Council 2026<span class="tag">Committee</span><span class="note">08/26/25</span></span><span class="vv">$2,500.00</span></div>
+        <div class="bd-row"><span class="nm">Building A Stronger West<span class="tag">PAC</span><span class="note">Western States Regional Council of Carpenters PAC &mdash; 09/16/26</span></span><span class="vv">$2,500.00</span></div>
+        <div class="bd-row"><span class="nm">Dustin Campbell<span class="note">Campbell Farms &mdash; 10/26/25</span></span><span class="vv">$1,000.00</span></div>
+        <div class="bd-row"><span class="nm">Molly Campbell<span class="note">Campbell Farms &mdash; 10/30/25</span></span><span class="vv">$1,000.00</span></div>
+        <div class="bd-row"><span class="nm">Mike Ogden<span class="note">10/30/25</span></span><span class="vv">$1,000.00</span></div>
+        <div class="bd-row"><span class="nm">Donal Yasikochi<span class="note">Yasikochi Family Farm &mdash; 10/30/25</span></span><span class="vv">$1,000.00</span></div>
+        <div class="bd-row"><span class="nm">Lynn Jepsen<span class="note">06/26/25 &amp; 11/03/25</span></span><span class="vv">$1,000.00</span></div>
+        <div class="bd-row"><span class="nm">Avalon Mgt. Group, Inc.<span class="note">08/03/26</span></span><span class="vv">$1,000.00</span></div>
+        <div class="bd-row"><span class="nm">California Real Estate PAC<span class="tag">PAC</span><span class="note">08/13/26, reported as a 24-hour late contribution</span></span><span class="vv">$1,000.00</span></div>
+        <div class="bd-row"><span class="nm">Terry Johnson<span class="note">06/26/25 &amp; 10/14/25</span></span><span class="vv">$750.00</span></div>
+        <div class="bd-row"><span class="nm">John Franklin for Central Committee 2024<span class="tag">Committee</span><span class="note">06/18/25</span></span><span class="vv">$500.00</span></div>
+        <div class="bd-row"><span class="nm">Debra Dugan<span class="note">06/30/25</span></span><span class="vv">$500.00</span></div>
+        <div class="bd-row"><span class="nm">Jim Myers<span class="note">06/30/25</span></span><span class="vv">$500.00</span></div>
+        <div class="bd-row"><span class="nm">Craig Wickman<span class="note">08/22/25</span></span><span class="vv">$500.00</span></div>
+        <div class="bd-row"><span class="nm">David Fischbach<span class="note">CEO, Beachfront Only Vacation Rentals &mdash; 10/30/25</span></span><span class="vv">$500.00</span></div>
+        <div class="bd-row"><span class="nm">William Birnie<span class="note">Frontwave Credit Union &mdash; 09/10/26</span></span><span class="vv">$500.00</span></div>
+        <div class="bd-row"><span class="nm">Sally Sporrer<span class="note">08/18/26</span></span><span class="vv">$500.00</span></div>
+        <div class="bd-row"><span class="nm">Jerry Harder<span class="note">06/26/25 &amp; 12/08/25</span></span><span class="vv">$400.00</span></div>
+        <div class="bd-row"><span class="nm">Rick Robinson<span class="note">Self &mdash; transferred from his 2022 committee, 03/27/25</span></span><span class="vv">$308.37</span></div>
+        <div class="bd-row"><span class="nm">Vickie Prosser<span class="note">06/26/25</span></span><span class="vv">$300.00</span></div>
+        <div class="bd-row"><span class="nm">Tom Morrissey<span class="note">Morrissey Construction Company &mdash; 10/30/25</span></span><span class="vv">$300.00</span></div>
+        <div class="bd-row"><span class="nm">Laura Bassett<span class="note">06/26/25</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row"><span class="nm">Ken Altman<span class="note">Chairman, Altman Specialty Plants &mdash; 09/22/25</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row"><span class="nm">Louise Balma<span class="note">10/09/25</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row"><span class="nm">David Heering<span class="note">10/26/25</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row"><span class="nm">Donna Cleary<span class="note">California State Legislature staff &mdash; 10/30/25</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row"><span class="nm">Hugh Dykes<span class="note">VP Community Development, Frontwave Credit Union &mdash; 10/30/25</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row"><span class="nm">Tonya Danielly<span class="note">Executive Director, Ivy Ranch Park Assoc. &mdash; 12/22/25</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row"><span class="nm">Jeffrey Cavignac<span class="note">Insurance sales, San Diego &mdash; 02/20/26</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row"><span class="nm">Michelle Goldberg<span class="note">Utility design consultant, Carlsbad &mdash; 02/23/26</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row"><span class="nm">Troy Reist<span class="note">Geologist, San Diego &mdash; 02/23/26</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row"><span class="nm">Dawna &amp; Jon Corn<span class="note">Del Mar / Cardiff by the Sea &mdash; 02/25/26, $250 each</span></span><span class="vv">$500.00</span></div>
+        <div class="bd-row"><span class="nm">Ryan Keim for Mayor 2024<span class="tag">Committee</span><span class="note">06/09/26</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row"><span class="nm">Bruce Howe<span class="note">08/26/26</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row"><span class="nm">Beverley Shapiro<span class="note">06/17/25 &amp; 08/26/26</span></span><span class="vv">$200.00</span></div>
+        <div class="bd-row"><span class="nm">Joe Valenti Jr.<span class="note">06/19/25 &amp; 10/12/25</span></span><span class="vv">$200.00</span></div>
+        <div class="bd-row"><span class="nm">Jerry Kern<span class="note">06/26/25</span></span><span class="vv">$200.00</span></div>
+        <div class="bd-row"><span class="nm">Colleen O'Harra<span class="note">06/26/25</span></span><span class="vv">$200.00</span></div>
+        <div class="bd-row"><span class="nm">Patti Siegmann<span class="note">06/26/25 &amp; 10/30/25</span></span><span class="vv">$200.00</span></div>
+        <div class="bd-row"><span class="nm">John Todd<span class="note">09/09/26</span></span><span class="vv">$200.00</span></div>
+        <div class="bd-row other"><span class="nm">Contributions of $100 or less<span class="note">Bruce May, Diane Holloway, Jordan Marks, and smaller gifts, plus a small filing-reconciliation difference</span></span><span class="vv">$510.00</span></div>
+        <div class="bd-row tot"><span class="nm">Monetary contributions &mdash; total since committee formed</span><span class="vv">$30,768.37</span></div>
+        <div class="bd-row"><span class="nm">Candidate loans outstanding<span class="note">Robinson to his own committee &mdash; $4,000 (05/23/25) + $10,000 (06/30/26)</span></span><span class="vv">$14,000.00</span></div>
+        <div class="bd-row"><span class="nm">Nonmonetary (in-kind)<span class="note">Fundraiser refreshments (George &amp; Kim Murray, Neil &amp; Debbie Nagata, $800 in 2025) + Oceanside Firefighters Association walk cards ($501.52 in 2026)</span></span><span class="vv">$1,301.52</span></div>
+        <div class="bd-row tot"><span class="nm">Robinson total contributions received &mdash; since 03/06/2025</span><span class="vv">$46,069.89</span></div>
+        <div class="bd-grand"><span class="nm">Spent since committee formed</span><span class="vv">$19,924.68</span></div>
+        <p class="bd-note">Cash on hand: $26,145.21. This is Robinson's committee's ENTIRE fundraising history, not just this calendar year &mdash; his "Re-Elect Rick Robinson City Council 2026" committee filed its Form 410 on 03/06/2025, more than a year before mine, and had already raised $27,818.37 by the end of 2025. Pulled from all four of his Form 460s: 214600778, 215505013, 217118682, and 1050.</p>
+      </div>
+
+      <!-- GONZALES FULL-CAMPAIGN BREAKDOWN -- donor-by-donor from EVERY filing since the committee was formed: 215560084 (12/03-12/31/25), 217113002 (01/01-06/30/26), 1049 (07/01-09/19/26) -->
+      <div class="bd-block">
+        <div class="bd-head"><span class="t">Emily Gonzales &mdash; full-campaign breakdown, since 11/12/2025</span></div>
+        <div class="bd-row"><span class="nm">Future Democrats PAC<span class="tag">PAC</span><span class="note">Washington, DC &mdash; 03/27/26</span></span><span class="vv">$1,900.00</span></div>
+        <div class="bd-row"><span class="nm">Kenneth Dalpe<span class="note">Oceanside &mdash; recurring donor, $100 gifts throughout 2026</span></span><span class="vv">$1,700.00</span></div>
+        <div class="bd-row"><span class="nm">Steven Burrell<span class="note">Retired, Oceanside &mdash; 03/07/26</span></span><span class="vv">$800.00</span></div>
+        <div class="bd-row"><span class="nm">Larry Warner<span class="note">Oceanside &mdash; recurring donor, throughout 2026</span></span><span class="vv">$800.00</span></div>
+        <div class="bd-row"><span class="nm">Diane Nygaard<span class="note">Oceanside &mdash; 03/07/26 &amp; 09/04/26</span></span><span class="vv">$800.00</span></div>
+        <div class="bd-row"><span class="nm">Democratic Club of Carlsbad Oceanside<span class="note">02/28/26</span></span><span class="vv">$800.00</span></div>
+        <div class="bd-row"><span class="nm">Daniel Dominguez<span class="note">Retired, Oceanside &mdash; 03/07/26</span></span><span class="vv">$800.00</span></div>
+        <div class="bd-row"><span class="nm">McCarty for Mayor 2028<span class="tag">Committee</span><span class="note">Sacramento &mdash; 07/20/26</span></span><span class="vv">$750.00</span></div>
+        <div class="bd-row"><span class="nm">Emily Gonzales<span class="note">Candidate self-fund/offset &mdash; 06/30/26</span></span><span class="vv">$621.82</span></div>
+        <div class="bd-row"><span class="nm">Emily Gonzales<span class="note">Candidate seed money, before 2026 &mdash; 12/13/25 &amp; 12/23/25</span></span><span class="vv">$55.00</span></div>
+        <div class="bd-row"><span class="nm">Sarah Maiani<span class="note">Artist, Santa Barbara &mdash; 01/10/26</span></span><span class="vv">$500.00</span></div>
+        <div class="bd-row"><span class="nm">OMHA &mdash; Oceanside Manufactured Homeowners Alliance<span class="note">06/26/26 &amp; 07/30/26</span></span><span class="vv">$500.00</span></div>
+        <div class="bd-row"><span class="nm">Mica Hashimoto<span class="note">Chief Financial Officer, The Swell Collective &mdash; 03/15/26 &amp; 08/18/26</span></span><span class="vv">$500.00</span></div>
+        <div class="bd-row"><span class="nm">Tina Valin<span class="note">Oceanside &mdash; 04/02/26</span></span><span class="vv">$500.00</span></div>
+        <div class="bd-row"><span class="nm">Kim Stone<span class="note">Retired, Oceanside &mdash; 02/13, 06/22, 07/24 &amp; 08/26/26</span></span><span class="vv">$400.00</span></div>
+        <div class="bd-row"><span class="nm">Karen Glover<span class="note">Professor, CSU San Marcos &mdash; 03/08 &amp; 06/16/26</span></span><span class="vv">$400.00</span></div>
+        <div class="bd-row"><span class="nm">Mike Tenhover<span class="note">Oceanside &mdash; 07/09 &amp; 09/15/26</span></span><span class="vv">$400.00</span></div>
+        <div class="bd-row"><span class="nm">Kyle Krahel-Frolander<span class="note">District Director, U.S. House of Representatives &mdash; 05/13/26</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row"><span class="nm">Brian Simmons, OFS<span class="note">Marina, CA &mdash; 01/02/26</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row"><span class="nm">Mike Bullock<span class="note">Oceanside &mdash; 03/09/26</span></span><span class="vv">$200.00</span></div>
+        <div class="bd-row"><span class="nm">Ann Campbell<span class="note">Retired, Davis &mdash; 05/29/26</span></span><span class="vv">$200.00</span></div>
+        <div class="bd-row"><span class="nm">Michelle Lustig<span class="note">Ed. Admin, LACOE &mdash; 03/07/26</span></span><span class="vv">$200.00</span></div>
+        <div class="bd-row"><span class="nm">Dennis Martinek<span class="note">Fallbrook &mdash; 03/08/26</span></span><span class="vv">$200.00</span></div>
+        <div class="bd-row"><span class="nm">Shelly Parker<span class="note">Retired, Oceanside &mdash; 03/07/26</span></span><span class="vv">$200.00</span></div>
+        <div class="bd-row"><span class="nm">Judy Stone<span class="note">Retired, Oceanside &mdash; 03/31/26</span></span><span class="vv">$200.00</span></div>
+        <div class="bd-row"><span class="nm">The Carol H. McCall Trust<span class="note">Oceanside &mdash; 08/18/26</span></span><span class="vv">$200.00</span></div>
+        <div class="bd-row"><span class="nm">Dino Gregorich<span class="note">IT consultant, Oceanside &mdash; 05/31/26</span></span><span class="vv">$200.00</span></div>
+        <div class="bd-row"><span class="nm">Jill Laughlin<span class="note">RN, Davita Healthcare Partners &mdash; recurring, throughout 2026</span></span><span class="vv">$175.00</span></div>
+        <div class="bd-row"><span class="nm">Leticia Madril<span class="note">Oceanside, self-employed &mdash; recurring, throughout 2026</span></span><span class="vv">$150.00</span></div>
+        <div class="bd-row"><span class="nm">Amber Niuatoa<span class="note">Professor, MiraCosta &mdash; 09/09/26</span></span><span class="vv">$111.00</span></div>
+        <div class="bd-row other"><span class="nm">Contributions of $100 or less<span class="note">Carol Broeland, Mike Kosec, John MacDowell, Valarie McCourtney, Chris Waidelich, Ron Dwyer-Voss, Michele Cyr, Lesa Thode, Warren Troy, Mathew Meyer, Amanda-Dawn Natalia, and smaller gifts</span></span><span class="vv">$2,226.91</span></div>
+        <div class="bd-row tot"><span class="nm">Monetary contributions &mdash; total since committee formed</span><span class="vv">$16,989.73</span></div>
+        <div class="bd-row"><span class="nm">Candidate loan outstanding<span class="note">Gonzales to her own committee, via The Collective Consultancy &mdash; 12/26/25</span></span><span class="vv">$1,000.00</span></div>
+        <div class="bd-row"><span class="nm">Nonmonetary (in-kind)<span class="note">democrats.com (Bob Fertik) &mdash; email list to Oceanside activists</span></span><span class="vv">$524.60</span></div>
+        <div class="bd-row tot"><span class="nm">Gonzales total contributions received &mdash; since 11/12/2025</span><span class="vv">$18,514.33</span></div>
+        <div class="bd-grand"><span class="nm">Spent since committee formed</span><span class="vv">$11,506.37</span></div>
+        <p class="bd-note">Cash on hand: $7,017.96. Gonzales's committee filed its Form 410 on 12/15/2025, about two and a half months before mine, so this is close to a calendar-year total &mdash; the only pre-2026 activity was $55 in seed contributions and the $1,000 loan in December 2025. Pulled from all three of her Form 460s: 215560084, 217113002, and 1049.</p>
+      </div>
+
+      <!-- JAMES 2026 BREAKDOWN (my own committee, FPPC ID 1491965) -->
+      <div class="bd-block">
+        <div class="bd-head"><span class="t">Ricky James &mdash; full-campaign breakdown, since committee formed 2026</span></div>
+        <div class="bd-row"><span class="nm">Rick &amp; Tina James<span class="note">My parents</span></span><span class="vv">$500.00</span></div>
+        <div class="bd-row"><span class="nm">Roy Green<span class="note">Father-in-Law &mdash; Huntington Beach</span></span><span class="vv">$1,200.00</span></div>
+        <div class="bd-row"><span class="nm">Chance Hardy<span class="note">Owner, Hardy Window Company &mdash; Placentia</span></span><span class="vv">$1,000.00</span></div>
+        <div class="bd-row"><span class="nm">Kyle Carruthers, Maria Melissa Larish, Steven Bauer<span class="note">Three new $100 gifts, received 08/24/26</span></span><span class="vv">$300.00</span></div>
+        <div class="bd-row"><span class="nm">OsideBBC.com Podcast<span class="note">In-kind &mdash; 8 political ads on the Big Buccaneer Channel podcast</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row other"><span class="nm">All other contributors under $100</span><span class="vv">$373.24</span></div>
+        <div class="bd-row tot"><span class="nm">James total contributions received &mdash; since committee formed</span><span class="vv">$3,623.24</span></div>
+        <div class="bd-grand"><span class="nm">Spent since committee formed</span><span class="vv">$3,178.84</span></div>
+        <p class="bd-note">Cash on hand: $444.40. My $100 personal seed loan to the campaign has since been repaid in full. My committee didn't exist before this year, so this figure is already a true full-campaign total. Note: my most recent Form 460 (filed 09/20/26) shows the calendar-year monetary-contributions column unchanged from my last report even though I itemized $2,848.24 in new contributions this period &mdash; likely a data-entry slip on my part rather than the treasurer's, and I'm following up to see whether it needs an amendment. The total above reflects what's actually been raised.</p>
+      </div>
+
+      <div class="pac-track">
+        <div class="t">Tracking the 2026 cycle</div>
+        <p>We monitor the active District 2 candidates &mdash; <strong>Rick Robinson</strong>, <strong>Emily Gonzales</strong>, and my own committee &mdash; along with the PACs active in the race, capturing monetary and nonmonetary contributions, loans, and late-contribution reports as they post to the City of Oceanside's eFile system. The three committees didn't start on the same day: Robinson's opened 03/06/2025, Gonzales's opened 11/12/2025, and mine opened in 2026, so a fair comparison has to total each one's full history rather than just this calendar year &mdash; that's what's shown above. Robinson's committee carries $14,000 in outstanding candidate loans; Gonzales's carries a $1,000 loan from The Collective Consultancy (reported December 2025). Figures above are pulled from every Form 460 each committee has filed since it opened, through each candidate's most recent report (filed the week of September 20&ndash;24, 2026, covering the period through September 19, 2026).</p>
+      </div>
+
+      <p class="chart-source">
+        My campaign has raised $3,623.24 since my committee was formed &mdash; including $500 from my parents, Rick and Tina James,
+        $1,200 from a retiree in Huntington Beach, $1,000 from a small-business owner in Placentia, three new
+        $100 gifts in late August, and a $250 in-kind podcast-ad donation. My $100 personal seed loan has
+        since been repaid in full. I don't solicit contributions, and I pledge not to take money from
+        developers, vendors, PACs, or any interest seeking to advance an agenda. Robinson's
+        re-election committee, which has been raising money since March 2025, has reported $46,069.89 in total
+        contributions received since it formed (including $14,000 in candidate loans). Gonzales's committee,
+        open since November 2025, has reported $18,514.33 in total contributions received since it formed.
+        All figures above come from every Form 460 each candidate's committee has filed to date.
+      </p>
+    </div>
+
+    <!-- CARD B: historical filing record (separated) -->
+    <div class="chart-card history">
+      <span class="history-tag">For context &middot; prior filings</span>
+      <h3>Rick Robinson's 2022 Campaign</h3>
+      <div class="sub">2022 election cycle &mdash; final/amended, fixed figures</div>
+
+      <div class="bar-row">
+        <div class="bl"><span class="who">Rick Robinson &mdash; 2022</span><span class="amt">$86,379</span></div>
+        <div class="bar-track"><div class="bar-fill navy" style="width:100%;">incl. Political Action Committee (PAC) independent expenditures</div></div>
+      </div>
+
+      <!-- 2022 BREAKDOWN -->
+      <div class="bd-block">
+        <div class="bd-head"><span class="t">2022 breakdown</span></div>
+        <div class="bd-row"><span class="nm">Oceanside Firefighters Association PAC<span class="tag">PAC · independent expenditures</span><span class="note">Sched. D/E/G IEs: mailers, digital ads, walk cards, texts, postage</span></span><span class="vv">$39,862.70</span></div>
+        <div class="bd-row"><span class="nm">Oceanside Police Officers' Association<span class="tag">PAC</span><span class="note">$1,000 monetary + independent-expenditure printing &amp; mailing</span></span><span class="vv">$21,947.39</span></div>
+        <div class="bd-row"><span class="nm">Howard Jacobs / GK Asset Management<span class="note">Developer &mdash; &ldquo;Sunsets&rdquo; micro-apartment project</span></span><span class="vv">$4,900.00</span></div>
+        <div class="bd-row"><span class="nm">Shantu Patel<span class="note">Developer &mdash; former Flying Bridge project</span></span><span class="vv">$1,000.00</span></div>
+        <div class="bd-row"><span class="nm">Waste Management<span class="note">City refuse-franchise hauler</span></span><span class="vv">$1,000.00</span></div>
+        <div class="bd-row"><span class="nm">David Fischbach / Blue Curl LLC<span class="note">Short-term-rental operator (Beachfront Only Rentals)</span></span><span class="vv">$1,000.00</span></div>
+        <div class="bd-row"><span class="nm">Neal Nagata / Nagata Brothers LLC<span class="note">Farming landowner</span></span><span class="vv">$500.00</span></div>
+        <div class="bd-row"><span class="nm">Joe Valenti / North Coast Village<span class="note">Vacation-rental operator</span></span><span class="vv">$400.00</span></div>
+        <div class="bd-row"><span class="nm">Dustin Campbell<span class="note">Tied to a cannabis-cultivation permit application (Sleeping Indian Rd)</span></span><span class="vv">$250.00</span></div>
+        <div class="bd-row other"><span class="nm">All other contributors</span><span class="vv">$15,519.39</span></div>
+        <div class="bd-row tot"><span class="nm">2022 total</span><span class="vv">$86,379.48</span></div>
+      </div>
+
+
+      <p class="chart-source">
+        Contribution amounts and dates are from public California Form 460 filings via the City of
+        Oceanside's <a href="https://efile.ci.oceanside.ca.us/public/search/campaign?query_string=&amp;state_id=&amp;start_date=2025-08-28&amp;end_date=2026-08-28&amp;filing_types=fppc400,fppc410,fppc425,fppc450,fppc460,fppc461,fppc465,fppc470,fppc496,fppc497,fppc497lcr,fppc497lcm,fppc501&amp;committee_types=Candidate%20or%20Officeholder,Primarily%20Formed%20Candidate,Primarily%20Formed%20Ballot%20Measure,General%20Purpose,Major%20Donor,Independent%20Expenditure,470%20Officeholder,470%20Person,Slate%20Mailer&amp;current_page=1&amp;page_size=10" target="_blank" rel="noopener">eFile system</a>.
+        Notes identify each contributor's publicly known business, role, or project before the City.
+        2022 totals are final/amended and stay fixed.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- GET INVOLVED -->
+<!-- WHY YOUR VOTE MATTERS -->
+<section class="turnout">
+  <div class="wrap">
+    <div class="eyebrow">Why your vote matters</div>
+    <h2>In 2022, the District 2 seat was decided by just <span class="gold">817 votes</span>.</h2>
+    <p class="t-lead">This is a small, close district &mdash; a handful of engaged neighbors genuinely decide who represents you.</p>
+    <div class="turnout-stats">
+      <div class="tstat"><div class="n">817</div><div class="l">margin of victory in 2022</div></div>
+      <div class="tstat"><div class="n">11,815</div><div class="l">total votes that chose the seat</div></div>
+      <div class="tstat"><div class="n">~43,742</div><div class="l">residents in District 2</div></div>
+    </div>
+    <p class="punch">You're not a drop in the bucket here &mdash; <span class="gold">you're the margin.</span></p>
+    <p class="t-src">Source: San Diego County Registrar of Voters, 2022 official results.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><span>RICKY JAMES<small>Oceanside City Council · District 2</small></span></a>
+    <div class="social">
+      <a href="mailto:ricky@oceanside2026.com">ricky@oceanside2026.com</a>
+      <a href="tel:+17602122185">760-212-2185</a>
+      <a class="footer-ico" href="https://www.instagram.com/rickyjamesoceanside/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg> Instagram</a>
+      <a class="footer-ico" href="https://www.facebook.com/RickyJamesOceanside/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg> Facebook</a>
+    </div>
+    <p class="tags">#RickyJamesForOceanside #Oceanside2026</p>
+
+    <div class="sms-box">
+      <p class="sms-label">Get text updates from the campaign</p>
+      <form name="sms-optin" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="sms-optin" />
+        <p class="bot-field"><label>Don&rsquo;t fill this out: <input name="bot-field" /></label></p>
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="tel" name="phone" placeholder="Mobile number" required />
+        <label class="sms-consent">
+          <input type="checkbox" name="consent" />
+          <span>Yes, I&rsquo;d like to receive text updates from Ricky James for Oceanside City Council 2026 (event reminders, volunteer opportunities, and voting reminders). Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help. Consent is not a condition of any purchase or contribution.</span>
+        </label>
+        <button type="submit">Yes, Sign Me Up</button>
+        <p class="sms-fine"><a href="policy/index.html">Terms &amp; Conditions</a> &middot; <a href="policy/index.html">Privacy Policy</a></p>
+      </form>
+    </div>
+
+    <p class="disclaimer">Paid for by Ricky James for Oceanside City Council 2026. FPPC ID #1491965. &middot; <a href="policy/index.html" style="color:#8b8f7c;text-decoration:underline;">Privacy Policy &amp; Terms</a></p>
+  </div>
+</footer>
+
+<script>
+  function closeMenu(){document.getElementById('menu').classList.remove('open');}
+
+  // The form POSTs to the campaign's Google Form via the hidden iframe, so the
+  // visitor stays on this page. We show the thank-you message right after submit.
+  // Show the right sub-section based on Volunteer / Contribute / Both
+  function onInvolve(){
+    var v = (document.querySelector('input[name="involve"]:checked')||{}).value || '';
+    document.querySelectorAll('.pick-opt').forEach(function(l){
+      l.classList.toggle('sel', l.querySelector('input').checked);
+    });
+    document.getElementById('volBlock').classList.toggle('show',  v==='Volunteer' || v==='Both');
+    document.getElementById('giveBlock').classList.toggle('show', v==='Contribute' || v==='Both');
+  }
+
+  // Returns the chosen contribution amount as a display string (e.g., "2,026"), or ''.
+  function pickedAmount(){
+    var sel = document.querySelector('input[name="giveamt"]:checked');
+    if(!sel) return '';
+    if(sel.value === 'custom'){
+      var v = parseFloat(document.getElementById('amtCustomVal').value);
+      return (v > 0) ? v.toLocaleString('en-US') : '';
+    }
+    return (sel.value.indexOf('.') > -1) ? sel.value : parseFloat(sel.value).toLocaleString('en-US');
+  }
+
+  // Highlight the chosen amount, reveal the custom field, and update the hint.
+  function onAmt(){
+    var sel = document.querySelector('input[name="giveamt"]:checked');
+    document.querySelectorAll('.amt').forEach(function(l){ l.classList.toggle('sel', l.querySelector('input').checked); });
+    document.getElementById('amtCustom').classList.toggle('show', !!sel && sel.value === 'custom');
+    var hint = document.getElementById('amtHint');
+    var amt = pickedAmount();
+    // Pre-fill the chosen amount on the Anedot card-giving link.
+    var card = document.getElementById('cardGive');
+    var base = 'https://secure.anedot.com/ricky-james-for-oceanside-city-council-2026/rickyjamesoceanside';
+    var num = sel && sel.value !== 'custom' ? sel.value : (sel && sel.value === 'custom' ? (document.getElementById('amtCustomVal').value || '') : '');
+    if (card){ card.href = (num && parseFloat(num) > 0) ? (base + '?amount=' + num) : base; }
+    if (amt){
+      hint.innerHTML = 'You picked <strong>$' + amt + '</strong> &mdash; send it via Zelle to <strong>RickyJamesOceanside</strong>, or tap <strong>Give by card</strong> below.';
+    } else {
+      hint.textContent = 'Choose an amount, then send it below. No pressure.';
+    }
+  }
+
+  function onJoinSubmit(){
+    var form = document.getElementById('joinForm');
+    // Record the involvement choice inside the message field (free-text) so it
+    // reaches the Google Form without needing a new question there.
+    var choice = (document.querySelector('input[name="involve"]:checked')||{}).value || '';
+    var msg = document.getElementById('msg');
+    if (choice && msg.value.indexOf('[Getting involved:') === -1){
+      msg.value = '[Getting involved: ' + choice + '] ' + msg.value;
+    }
+    var amt = pickedAmount();
+    if (amt && msg.value.indexOf('[Plans to give:') === -1){
+      msg.value = msg.value + ' [Plans to give: $' + amt + ']';
+    }
+    setTimeout(function(){
+      form.style.display = 'none';
+      document.getElementById('success').style.display = 'block';
+      form.reset();
+    }, 400);
+    return true;
+  }
+</script>
+</body>
+</html>
