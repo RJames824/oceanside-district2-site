@@ -77,6 +77,14 @@
   footer .social a.footer-ico{display:inline-flex;align-items:center;gap:6px;}
   footer .social a.footer-ico svg{width:20px;height:20px;}
 
+  /* ELECTION URGENCY BAR */
+  .election-bar{background:var(--lime);color:var(--bg);padding:10px 0;}
+  .election-bar .wrap{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;text-align:center;}
+  .election-bar .eb-dot{width:8px;height:8px;border-radius:50%;background:var(--bg);flex:none;animation:pulse 2s infinite;}
+  .election-bar .eb-txt{font-weight:700;font-size:.86rem;letter-spacing:.01em;}
+  .election-bar a.eb-link{color:var(--bg);font-weight:800;text-decoration:underline;font-size:.86rem;}
+  .election-bar a.eb-link:hover{color:#fff;}
+
   /* HERO */
   .hero{
     position:relative;overflow:hidden;color:#fff;padding:96px 0 92px;
@@ -166,6 +174,18 @@
   .pledge .seal{font-size:3.4rem;}
   .pledge h2{font-size:clamp(1.6rem,3.2vw,2.4rem);color:var(--lime);margin-bottom:10px;}
   .pledge p{color:#dfe3d2;max-width:760px;margin-left:auto;margin-right:auto;}
+  .pledge .wrap{flex-direction:column;}
+  .kept-lead{font-weight:800;color:#fff;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-top:28px;}
+  .kept-lead .gold{color:var(--lime);}
+  .kept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px;max-width:980px;text-align:left;}
+  .kept-item{background:rgba(255,255,255,.04);border:1px solid rgba(149,255,0,.28);border-radius:6px;padding:18px 20px;}
+  .kept-item .ki-tag{display:inline-flex;align-items:center;gap:7px;font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--lime);margin-bottom:9px;}
+  .kept-item .ki-tag::before{content:"\2713";display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:var(--lime);color:var(--bg);font-size:.6rem;font-weight:800;flex:none;}
+  .kept-item h4{color:#fff;font-size:1rem;font-weight:800;margin-bottom:6px;}
+  .kept-item p{color:#c7cbb8;font-size:.85rem;line-height:1.5;margin:0;max-width:none;}
+  .kept-item a{color:var(--lime);font-weight:700;text-decoration:underline;}
+  @media (max-width:860px){ .kept-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .kept-grid{grid-template-columns:1fr;} }
 
   /* TURNOUT */
   .turnout{
@@ -438,6 +458,15 @@
 </head>
 <body>
 
+<!-- ELECTION URGENCY BAR -->
+<div class="election-bar">
+  <div class="wrap">
+    <span class="eb-dot"></span>
+    <span class="eb-txt">Election Day is Tuesday, November 3 &mdash; just 6 days away.</span>
+    <a class="eb-link" href="https://www.sdvote.com" target="_blank" rel="noopener">Find your polling place &amp; drop-off locations &rarr;</a>
+  </div>
+</div>
+
 <!-- NAV -->
 <header class="nav">
   <div class="wrap">
@@ -573,7 +602,7 @@
     <div class="section-head">
       <div class="eyebrow">My Priorities</div>
       <h2>Some of my priorities for a better Oceanside</h2>
-      <p>Real problems deserve real solutions &mdash; not empty promises. Here's what I'll fight for on day one.</p>
+      <p>Real problems deserve real solutions &mdash; not empty promises. Here's what I'll fight for on day one, and what I'm already fighting for right now.</p>
     </div>
     <div class="grid">
       <div class="issue">
@@ -585,12 +614,52 @@
         <p>The City's answer to years of budget strain is asking residents for a 0.5% sales tax increase. I think that's backwards &mdash; it hits young families and seniors on fixed incomes hardest, and it lets the City avoid fixing how it spends before asking residents for more.</p>
       </div>
       <div class="issue">
-        <h3>Reachable Councilmember</h3>
-        <p>Too many residents only hear from their councilmember at election time. I'll hold real office hours, show up where residents already are, and explain City decisions in plain language before they're made &mdash; not after.</p>
+        <h3>Reachable Councilmember &mdash; Your Voice at City Hall</h3>
+        <p>Too many residents only hear from their councilmember at election time. I'll hold real office hours, show up where residents already are, explain City decisions in plain language before they're made &mdash; not after, and make it easier for residents to actually show up and be heard.</p>
       </div>
       <div class="issue">
         <h3>Smart Development</h3>
         <p>I'm pro-growth &mdash; but growth that fits our roads, water, and services, not approvals rushed through because a developer asked first. The General Plan Update left South Morro Hills without its own Community Plan, and I'm committed to getting one established &mdash; so residents there have an actual, adopted plan for how the area grows, not decisions made project by project.</p>
+      </div>
+      <div class="issue">
+        <h3>Fix Roads &amp; Sidewalks</h3>
+        <p>Our roads and sidewalks are falling apart in parts of District 2, and basics like this should come before anything flashy. Potholes, cracked sidewalks, and drainage problems get fixed first on my watch.</p>
+      </div>
+      <div class="issue">
+        <h3>Clean Up Our Parks</h3>
+        <p>Every neighborhood deserves safe, well-kept parks &mdash; not just the ones that get the attention. I'll make sure District 2's parks get their fair share of maintenance.</p>
+      </div>
+      <div class="issue">
+        <h3>Support Fire &amp; Police</h3>
+        <p>Our first responders keep this city safe, and they need the staffing and equipment to keep doing it. I'll make sure Fire and Police get what they need, not what's left over after everything else is funded.</p>
+      </div>
+      <div class="issue">
+        <h3>Cancel Flock Cameras</h3>
+        <p>The City has contracts for automated license-plate-reader cameras around Oceanside. Residents shouldn't have their movements tracked without a real conversation about it first. I'll push to end these contracts and protect residents' privacy.</p>
+      </div>
+      <div class="issue">
+        <h3>Help the Unhoused</h3>
+        <p>Homelessness in Oceanside needs a hands-on approach, not just another study or another check written to a program that isn't working. I'll push for real, practical steps that actually get people off the street and into stability.</p>
+      </div>
+      <div class="issue">
+        <h3>Protect Mobile Homes</h3>
+        <p>Oceanside has some of North County's last affordable mobile home communities, and residents there deserve protection from being priced or pushed out. I'll fight to keep these communities safe, stable, and affordable.</p>
+      </div>
+      <div class="issue">
+        <h3>Improve Our Schools</h3>
+        <p>Good schools are why families stay in a city. I'll work to partner with our schools &mdash; not just show up for a photo op &mdash; so families have a real reason to put down roots here.</p>
+      </div>
+      <div class="issue">
+        <h3>Save Our Farmland</h3>
+        <p>North Oceanside's farmland is part of what makes this city different from everywhere else in North County. I'll fight to protect it instead of letting it get paved over acre by acre.</p>
+      </div>
+      <div class="issue">
+        <h3>Promote Agritourism</h3>
+        <p>Our farms shouldn't just survive &mdash; they should be a reason people visit Oceanside. I'll push to turn agritourism into a real draw for visitors and a source of local jobs.</p>
+      </div>
+      <div class="issue">
+        <h3>Boost the Local Economy</h3>
+        <p>I want to bring good businesses to Oceanside and back the ones already here instead of taking them for granted. A stronger local economy means more jobs and a stronger tax base without raising taxes on residents.</p>
       </div>
       <div class="issue wide">
         <h3>Protect and promote the assets that set us apart</h3>
@@ -620,6 +689,40 @@
       <h2>My Pledge &mdash; A clean campaign</h2>
       <p>Municipal politics should run on honest relationships and reasonable compromise that protects residents. My vow is simple: I won't solicit or accept money that comes with an agenda. That starts with developers seeking approvals and vendors chasing city contracts &mdash; but it doesn't end there. I'll hold the same hesitation toward activists, non-profit organizations, political parties, and PACs looking to advance an agenda through my seat. When I take my seat on the City Council, I'll answer to residents, not to whoever wrote the biggest check.</p>
       <p>So how will I fund a campaign? With a strong message, efficiency, genuine relationships, and transparency &mdash; not a war chest. I want to stay as neutral and open-minded as possible, so I can offer the most rational and unbiased judgment on every decision that comes before me. I'll treat my campaign's finances the way I'll treat the City's: carefully, efficiently, and strategically. Money alone won't always solve a problem &mdash; motive, discernment, and honesty are more effective.</p>
+
+      <p class="kept-lead">This isn&rsquo;t just a promise &mdash; <span class="gold">here&rsquo;s what it&rsquo;s already meant</span></p>
+      <div class="kept-grid">
+        <div class="kept-item">
+          <div class="ki-tag">Kept</div>
+          <h4>No agenda money</h4>
+          <p>No PAC, developer, party, or vendor money. Every dollar is public &mdash; see the tracker below.</p>
+        </div>
+        <div class="kept-item">
+          <div class="ki-tag">Kept</div>
+          <h4>Votes aren&rsquo;t for sale</h4>
+          <p>No labor union or special interest buys a council vote from me.</p>
+        </div>
+        <div class="kept-item">
+          <div class="ki-tag">Kept</div>
+          <h4>Independent. Always.</h4>
+          <p>No party, no outside group telling me how to vote.</p>
+        </div>
+        <div class="kept-item">
+          <div class="ki-tag">Kept</div>
+          <h4>Campaign finance reform</h4>
+          <p>Oceanside&rsquo;s own donor limit, cut 75% to $1,475.</p>
+        </div>
+        <div class="kept-item">
+          <div class="ki-tag">Kept</div>
+          <h4>Waiving my salary</h4>
+          <p>Already filed with the City. About $2,152/mo goes back to the General Fund &mdash; details below.</p>
+        </div>
+        <div class="kept-item">
+          <div class="ki-tag">Kept</div>
+          <h4>No new flags</h4>
+          <p>The American flag unites all of us. That&rsquo;s the one we fly.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
