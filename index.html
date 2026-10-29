@@ -84,6 +84,10 @@
   .election-bar .eb-txt{font-weight:700;font-size:.86rem;letter-spacing:.01em;}
   .election-bar a.eb-link{color:var(--bg);font-weight:800;text-decoration:underline;font-size:.86rem;}
   .election-bar a.eb-link:hover{color:#fff;}
+  .election-bar .eb-clock{display:none;gap:6px;align-items:center;}
+  .election-bar .eb-clock.on{display:inline-flex;}
+  .election-bar .eb-unit{background:var(--bg);color:var(--lime);border-radius:4px;padding:3px 8px;font-family:'Archivo',sans-serif;font-weight:800;font-size:.9rem;line-height:1.15;text-align:center;min-width:46px;font-variant-numeric:tabular-nums;}
+  .election-bar .eb-unit small{display:block;font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;color:#d7dcc9;font-weight:700;}
 
   /* HERO */
   .hero{
@@ -462,8 +466,9 @@
 <div class="election-bar">
   <div class="wrap">
     <span class="eb-dot"></span>
-    <span class="eb-txt">Election Day is Tuesday, November 3 &mdash; just 6 days away.</span>
-    <a class="eb-link" href="https://www.sdvote.com" target="_blank" rel="noopener">Find your polling place &amp; drop-off locations &rarr;</a>
+    <span class="eb-txt" id="ebTxt">Election Day is Tuesday, November 3.</span>
+    <span class="eb-clock" id="ebClock" aria-live="off"></span>
+    <a class="eb-link" id="ebLink" href="https://www.sdvote.com" target="_blank" rel="noopener">Find your polling place &amp; drop-off locations &rarr;</a>
   </div>
 </div>
 
@@ -1026,6 +1031,35 @@
 
 <script>
   function closeMenu(){document.getElementById('menu').classList.remove('open');}
+
+  // Live countdown to when the polls close on Election Day (Nov 3, 2026, 8:00 PM Pacific = 04:00 UTC Nov 4).
+  (function(){
+    var close = Date.UTC(2026, 10, 4, 4, 0, 0);
+    var txt = document.getElementById('ebTxt');
+    var clock = document.getElementById('ebClock');
+    if(!txt || !clock) return;
+    function pad(n){ return n < 10 ? '0' + n : '' + n; }
+    function unit(n, l){ return '<span class="eb-unit">' + n + '<small>' + l + '</small></span>'; }
+    function tick(){
+      var ms = close - Date.now();
+      if(ms <= 0){
+        txt.textContent = 'The polls are closed. Thank you, District 2.';
+        clock.className = 'eb-clock';
+        clock.innerHTML = '';
+        var lk = document.getElementById('ebLink'); if(lk) lk.style.display = 'none';
+        return false;
+      }
+      var s = Math.floor(ms / 1000);
+      var d = Math.floor(s / 86400); s -= d * 86400;
+      var h = Math.floor(s / 3600);  s -= h * 3600;
+      var m = Math.floor(s / 60);    s -= m * 60;
+      txt.textContent = d >= 1 ? 'Polls close Tuesday, Nov. 3 at 8 PM in:' : 'Election Day is here. Polls close at 8 PM in:';
+      clock.innerHTML = unit(d, 'days') + unit(pad(h), 'hrs') + unit(pad(m), 'min') + unit(pad(s), 'sec');
+      clock.className = 'eb-clock on';
+      return true;
+    }
+    if(tick()){ var t = setInterval(function(){ if(!tick()) clearInterval(t); }, 1000); }
+  })();
 
   // The form POSTs to the campaign's Google Form via the hidden iframe, so the
   // visitor stays on this page. We show the thank-you message right after submit.
