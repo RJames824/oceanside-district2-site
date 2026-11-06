@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ricky James for Oceanside City Council 2026</title>
-<meta name="description" content="Ricky James is running for Oceanside City Council. A clean campaign focused on real solutions for homelessness on the San Luis Rey River Trail, preserving our eastern agricultural land, better parks, and bike lanes that actually work." />
+<meta name="description" content="Ricky James ran for Oceanside City Council, District 2 in 2026. Live election results, what he ran on, and a full look at who funded the race." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -84,10 +84,6 @@
   .election-bar .eb-txt{font-weight:700;font-size:.86rem;letter-spacing:.01em;}
   .election-bar a.eb-link{color:var(--bg);font-weight:800;text-decoration:underline;font-size:.86rem;}
   .election-bar a.eb-link:hover{color:#fff;}
-  .election-bar .eb-clock{display:none;gap:6px;align-items:center;}
-  .election-bar .eb-clock.on{display:inline-flex;}
-  .election-bar .eb-unit{background:var(--bg);color:var(--lime);border-radius:4px;padding:3px 8px;font-family:'Archivo',sans-serif;font-weight:800;font-size:.9rem;line-height:1.15;text-align:center;min-width:46px;font-variant-numeric:tabular-nums;}
-  .election-bar .eb-unit small{display:block;font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;color:#d7dcc9;font-weight:700;}
 
   /* HERO */
   .hero{
@@ -253,6 +249,11 @@
   .success{display:none;background:var(--gold-soft);border:1px solid var(--lime);border-radius:6px;padding:16px;text-align:center;color:var(--ink);font-weight:800;margin-top:18px;}
 
   /* FINANCE / TRANSPARENCY */
+  .results{padding:70px 0 60px;background:#fff;}
+  .results-frame{max-width:980px;margin:0 auto;background:#fff;border:1px solid var(--line);border-top:4px solid var(--lime);border-radius:6px;overflow:hidden;}
+  .results-frame iframe{display:block;width:100%;height:640px;border:0;}
+  .results-link{text-align:center;margin-top:18px;font-weight:800;}
+  .results-link a{color:var(--ink);text-decoration:underline;}
   .finance{background:var(--paper);}
   .finance .lead{max-width:760px;margin:0 auto 26px;text-align:center;color:var(--ink-soft);font-size:1.05rem;}
   .netfile-cta{display:flex;justify-content:center;margin-bottom:40px;}
@@ -466,9 +467,8 @@
 <div class="election-bar">
   <div class="wrap">
     <span class="eb-dot"></span>
-    <span class="eb-txt" id="ebTxt">Election Day is Tuesday, November 3.</span>
-    <span class="eb-clock" id="ebClock" aria-live="off"></span>
-    <a class="eb-link" id="ebLink" href="https://www.sdvote.com" target="_blank" rel="noopener">Find your polling place &amp; drop-off locations &rarr;</a>
+    <span class="eb-txt">Thank you, District 2. Election Day was November 3 and the county is still counting ballots.</span>
+    <a class="eb-link" href="#results">See the live results &darr;</a>
   </div>
 </div>
 
@@ -484,8 +484,9 @@
         <li><a href="#about" onclick="closeMenu()">About</a></li>
         <li><a href="#district" onclick="closeMenu()">District 2</a></li>
         <li><a href="#gallery" onclick="closeMenu()">Oceanside</a></li>
-        <li><a href="#issues" onclick="closeMenu()">Priorities</a></li>
+        <li><a href="#issues" onclick="closeMenu()">What I Ran On</a></li>
         <li><a href="#pledge" onclick="closeMenu()">My Pledge</a></li>
+        <li><a href="#results" onclick="closeMenu()">Results</a></li>
         <li><a href="#transparency" onclick="closeMenu()">Transparency</a></li>
         <li class="nav-socials"><a class="nav-ico" href="https://www.instagram.com/rickyjamesoceanside/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></a><a class="nav-ico" href="https://www.facebook.com/RickyJamesOceanside/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg></a></li>
       </ul>
@@ -500,9 +501,10 @@
       <div>
         <span class="kicker">Oceanside City Council · District 2 · 2026</span>
         <h1>This is home.<br><span class="accent">And it's worth fighting for.</span></h1>
-        <p class="lede">I'm Ricky James, and I'm running for Oceanside City Council in District 2. I hope you take the time to read my About Me, some of my Priorities, My Pledge and keep track of the financial contributions throughout this race. Feel free to reach out if you have any questions or want to support what this campaign is all about.</p>
+        <p class="lede">I'm Ricky James. I ran for Oceanside City Council in District 2 and I came up short. Thank you to everyone who voted, donated, knocked doors, or just took a minute to listen. Below you can see how the vote is going, what I ran on, and where the money in this race came from.</p>
         <div class="btns">
-          <a class="btn btn-ghost" href="#issues">My Priorities</a>
+          <a class="btn btn-gold" href="#results">Live Results</a>
+          <a class="btn btn-ghost" href="#issues">What I Ran On</a>
         </div>
       </div>
       <div class="hero-col">
@@ -529,12 +531,14 @@
       </div>
       <div>
         <div class="eyebrow">About Ricky</div>
-        <h2>Not the best resident. The best candidate.</h2>
-        <p>I am a 38 year old father, husband, son, brother. I was injured racing dirt bikes when I was 16 years old becoming a paraplegic. I have had to overcome some adversities in my life, but it has made me who I am today. I might not have dealt with them as I should have, but I am very grateful where my life has taken me. I now know I have the ability to serve my city in this capacity and there is no other motive other than being of service. I have not relied on a campaign manager, treasurer, or anybody to show me the ropes. I have worked very hard to figure out the system and it has been a great learning experience, something that I hope I can continue to do.</p>
-        <p>I'm not a career politician, and I won't pretend I'm the most qualified person in this city to sit on that dais. I'm not. But I am the best candidate this time. I take challenges head on and don't run from them because I can't run in the first place.</p>
-        <p>I identify as an Independent American because that's what I am. I didn't register Independent to hide anything. I'm not chasing both parties at the same time. I registered Independent because Oceanside City Council is a nonpartisan seat, and I intend to actually vote like it is, not carry water for a party, not chase endorsements from either side, and not let outside organizations or PACs tell me how to vote. I answer to District 2 residents.</p>
-        <p>I want this city to be the best possible city for young families to live in as well as compassionate to all seniors who love to live here even with the rising costs. We are a diversified city and no one should be left out. We will find solutions to make the potential of this city a reality if we work together.</p>
-        <p>Until November 3rd, I'll keep knocking on doors, keep showing up, and keep listening. This campaign isn't about me, it's about the neighbors who've stopped expecting City Hall to hear them. Let's make ourselves heard. Let's show how District 2 rolls.</p>
+        <h2>I lost. It was worth it.</h2>
+        <p>I am a 38 year old father, husband, son, brother. I was injured racing dirt bikes when I was 16 years old becoming a paraplegic. I have had to overcome some adversities in my life, but it has made me who I am today. I might not have dealt with them as I should have, but I am very grateful where my life has taken me. I ran because I believed I could serve my city, and there was no other motive than being of service. I never relied on a campaign manager, treasurer, or anybody to show me the ropes. I worked very hard to figure out the system, and it was a great learning experience.</p>
+        <p>I'm not a career politician, and I never pretended to be the most qualified person in this city to sit on that dais. I take challenges head on and don't run from them because I can't run in the first place.</p>
+        <p>I identify as an Independent American because that's what I am. I didn't register Independent to hide anything. I'm not chasing both parties at the same time. I registered Independent because Oceanside City Council is a nonpartisan seat, and I would have voted like it is: not carrying water for a party, not chasing endorsements from either side, and not letting outside organizations or PACs tell me how to vote. I answer to District 2 residents. This was a nonpartisan race, and I ran it that way: for the residents and the residents alone, never for either political party.</p>
+        <p>I still want this city to be the best possible place for young families to live, and compassionate to all the seniors who love living here even with the rising costs. We are a diversified city and no one should be left out. We can find solutions to make the potential of this city a reality if we work together.</p>
+        <p>Here's the plain truth: I got my butt kicked. Rick Robinson, the Republican incumbent, and Emily Gonzales, the Democrat, both beat me, and not by a little. It was still one of the best experiences of my life. You learn the most when you're a little over your head and you fight to keep pace.</p>
+        <p>I don't have a college degree, and this was the best crash course in city politics I could have asked for. No lie, six months ago I didn't even know city council was a nonpartisan election. I barely knew what nonpartisan meant.</p>
+        <p>I encourage anyone to do it. It's only a winning proposition. Even though I lost, and lost by a lot, I've grown immensely and I'll be so much more prepared next time around. Thank you to everyone who gave me a shot. Let's keep making ourselves heard.</p>
         <p class="sig">&mdash; Ricky James</p>
       </div>
     </div>
@@ -547,7 +551,7 @@
     <div class="section-head">
       <div class="eyebrow">Your Neighborhood</div>
       <h2>This is District 2</h2>
-      <p>North and northeast Oceanside &mdash; North Valley, Morro Hills, Guajome, Arrowood, and the San Luis Rey River corridor. If you live here, I'm running to represent <em>you</em>.</p>
+      <p>North and northeast Oceanside &mdash; North Valley, Morro Hills, Guajome, Arrowood, and the San Luis Rey River corridor. If you live here, this is the neighborhood I ran to represent, and it's still the one I care about most.</p>
     </div>
     <figure class="district-map">
       <img src="images/district-2-map.jpg" alt="Map of Oceanside City Council District 2 highlighted in gold over an aerial view of north Oceanside" loading="lazy">
@@ -562,7 +566,7 @@
     <div class="section-head">
       <div class="eyebrow">Out in Oceanside</div>
       <h2>Living it, not just talking about it</h2>
-      <p>From the River Trail to the harbor to our kids' ballfields &mdash; this is the Oceanside I'm fighting for.</p>
+      <p>From the River Trail to the harbor to our kids' ballfields &mdash; this is the Oceanside I ran for, and the one I'll keep fighting for.</p>
     </div>
     <div class="gallery-grid">
       <div class="gphoto">
@@ -605,62 +609,62 @@
 <section class="issues" id="issues">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">My Priorities</div>
-      <h2>Some of my priorities for a better Oceanside</h2>
-      <p>Real problems deserve real solutions &mdash; not empty promises. Here's what I'll fight for on day one, and what I'm already fighting for right now.</p>
+      <div class="eyebrow">What I Ran On</div>
+      <h2>Some of what I ran on for a better Oceanside</h2>
+      <p>Real problems deserve real solutions &mdash; not empty promises. Here's what I ran on, and what I'll keep pushing for from outside City Hall.</p>
     </div>
     <div class="grid">
       <div class="issue">
         <h3>Independent &mdash; Nonpartisan</h3>
-        <p>I don't intend to be the councilmember residents read about for the wrong reasons. No conflicts of interest, no backroom deals, no party loyalty tests &mdash; just steady, independent judgment on behalf of residents.</p>
+        <p>I never wanted to be the councilmember residents read about for the wrong reasons. No conflicts of interest, no backroom deals, no party loyalty tests &mdash; just steady, independent judgment on behalf of residents.</p>
       </div>
       <div class="issue">
         <h3>Fiscal Discipline &mdash; No New Taxes</h3>
-        <p>The City's answer to years of budget strain is asking residents for a 0.5% sales tax increase. I think that's backwards &mdash; it hits young families and seniors on fixed incomes hardest, and it lets the City avoid fixing how it spends before asking residents for more.</p>
+        <p>The City's answer to years of budget strain was asking residents for a 0.5% sales tax increase. I thought that was backwards &mdash; it hits young families and seniors on fixed incomes hardest, and it lets the City avoid fixing how it spends before asking residents for more.</p>
       </div>
       <div class="issue">
         <h3>Reachable Councilmember &mdash; Your Voice at City Hall</h3>
-        <p>Too many residents only hear from their councilmember at election time. I'll hold real office hours, show up where residents already are, explain City decisions in plain language before they're made &mdash; not after, and make it easier for residents to actually show up and be heard.</p>
+        <p>Too many residents only hear from their councilmember at election time. I planned to hold real office hours, show up where residents already are, explain City decisions in plain language before they're made &mdash; not after, and make it easier for residents to actually show up and be heard.</p>
       </div>
       <div class="issue">
         <h3>Smart Development</h3>
-        <p>I'm pro-growth &mdash; but growth that fits our roads, water, and services, not approvals rushed through because a developer asked first. The General Plan Update left South Morro Hills without its own Community Plan, and I'm committed to getting one established &mdash; so residents there have an actual, adopted plan for how the area grows, not decisions made project by project.</p>
+        <p>I'm pro-growth &mdash; but growth that fits our roads, water, and services, not approvals rushed through because a developer asked first. The General Plan Update left South Morro Hills without its own Community Plan, and I'm still committed to getting one established &mdash; so residents there have an actual, adopted plan for how the area grows, not decisions made project by project.</p>
       </div>
       <div class="issue">
         <h3>Fix Roads &amp; Sidewalks</h3>
-        <p>Our roads and sidewalks are falling apart in parts of District 2, and basics like this should come before anything flashy. Potholes, cracked sidewalks, and drainage problems get fixed first on my watch.</p>
+        <p>Our roads and sidewalks are falling apart in parts of District 2, and basics like this should come before anything flashy. Potholes, cracked sidewalks, and drainage problems should get fixed first.</p>
       </div>
       <div class="issue">
         <h3>Clean Up Our Parks</h3>
-        <p>Every neighborhood deserves safe, well-kept parks &mdash; not just the ones that get the attention. I'll make sure District 2's parks get their fair share of maintenance.</p>
+        <p>Every neighborhood deserves safe, well-kept parks &mdash; not just the ones that get the attention. I wanted to make sure District 2's parks got their fair share of maintenance.</p>
       </div>
       <div class="issue">
         <h3>Support Fire &amp; Police</h3>
-        <p>Our first responders keep this city safe, and they need the staffing and equipment to keep doing it. I'll make sure Fire and Police get what they need, not what's left over after everything else is funded.</p>
+        <p>Our first responders keep this city safe, and they need the staffing and equipment to keep doing it. I wanted Fire and Police to get what they need, not what's left over after everything else is funded.</p>
       </div>
       <div class="issue">
         <h3>Cancel Flock Cameras</h3>
-        <p>The City has contracts for automated license-plate-reader cameras around Oceanside. Residents shouldn't have their movements tracked without a real conversation about it first. I'll push to end these contracts and protect residents' privacy.</p>
+        <p>The City has contracts for automated license-plate-reader cameras around Oceanside. Residents shouldn't have their movements tracked without a real conversation about it first. I wanted to end these contracts and protect residents' privacy.</p>
       </div>
       <div class="issue">
         <h3>Help the Unhoused</h3>
-        <p>Homelessness in Oceanside needs a hands-on approach, not just another study or another check written to a program that isn't working. I'll push for real, practical steps that actually get people off the street and into stability.</p>
+        <p>Homelessness in Oceanside needs a hands-on approach, not just another study or another check written to a program that isn't working. I wanted real, practical steps that actually get people off the street and into stability.</p>
       </div>
       <div class="issue">
         <h3>Protect Mobile Homes</h3>
-        <p>Oceanside has some of North County's last affordable mobile home communities, and residents there deserve protection from being priced or pushed out. I'll fight to keep these communities safe, stable, and affordable.</p>
+        <p>Oceanside has some of North County's last affordable mobile home communities, and residents there deserve protection from being priced or pushed out. I wanted to keep these communities safe, stable, and affordable.</p>
       </div>
       <div class="issue">
         <h3>Improve Our Schools</h3>
-        <p>Good schools are why families stay in a city. I'll work to partner with our schools &mdash; not just show up for a photo op &mdash; so families have a real reason to put down roots here.</p>
+        <p>Good schools are why families stay in a city. I wanted to partner with our schools &mdash; not just show up for a photo op &mdash; so families have a real reason to put down roots here.</p>
       </div>
       <div class="issue">
         <h3>Save Our Farmland</h3>
-        <p>North Oceanside's farmland is part of what makes this city different from everywhere else in North County. I'll fight to protect it instead of letting it get paved over acre by acre.</p>
+        <p>North Oceanside's farmland is part of what makes this city different from everywhere else in North County. I wanted to protect it instead of letting it get paved over acre by acre.</p>
       </div>
       <div class="issue">
         <h3>Promote Agritourism</h3>
-        <p>Our farms shouldn't just survive &mdash; they should be a reason people visit Oceanside. I'll push to turn agritourism into a real draw for visitors and a source of local jobs.</p>
+        <p>Our farms shouldn't just survive &mdash; they should be a reason people visit Oceanside. I wanted to turn agritourism into a real draw for visitors and a source of local jobs.</p>
       </div>
       <div class="issue">
         <h3>Boost the Local Economy</h3>
@@ -692,10 +696,10 @@
   <div class="wrap">
     <div>
       <h2>My Pledge &mdash; A clean campaign</h2>
-      <p>Municipal politics should run on honest relationships and reasonable compromise that protects residents. My vow is simple: I won't solicit or accept money that comes with an agenda. That starts with developers seeking approvals and vendors chasing city contracts &mdash; but it doesn't end there. I'll hold the same hesitation toward activists, non-profit organizations, political parties, and PACs looking to advance an agenda through my seat. When I take my seat on the City Council, I'll answer to residents, not to whoever wrote the biggest check.</p>
-      <p>So how will I fund a campaign? With a strong message, efficiency, genuine relationships, and transparency &mdash; not a war chest. I want to stay as neutral and open-minded as possible, so I can offer the most rational and unbiased judgment on every decision that comes before me. I'll treat my campaign's finances the way I'll treat the City's: carefully, efficiently, and strategically. Money alone won't always solve a problem &mdash; motive, discernment, and honesty are more effective.</p>
+      <p>Municipal politics should run on honest relationships and reasonable compromise that protects residents. My vow was simple: I wouldn't solicit or accept money that came with an agenda. That started with developers seeking approvals and vendors chasing city contracts &mdash; but it didn't end there. I held the same hesitation toward activists, non-profit organizations, political parties, and PACs looking to advance an agenda through my seat. If I had taken a seat on the City Council, I'd have answered to residents, not to whoever wrote the biggest check.</p>
+      <p>So how did I fund a campaign? With a strong message, efficiency, genuine relationships, and transparency &mdash; not a war chest. I wanted to stay as neutral and open-minded as possible, so I could offer the most rational and unbiased judgment on every decision that came before me. I treated my campaign's finances the way I'd have treated the City's: carefully, efficiently, and strategically. Money alone won't always solve a problem &mdash; motive, discernment, and honesty are more effective.</p>
 
-      <p class="kept-lead">This isn&rsquo;t just a promise &mdash; <span class="gold">here&rsquo;s what it&rsquo;s already meant</span></p>
+      <p class="kept-lead">It wasn&rsquo;t just a promise &mdash; <span class="gold">here&rsquo;s what it meant</span></p>
       <div class="kept-grid">
         <div class="kept-item">
           <div class="ki-tag">Kept</div>
@@ -705,12 +709,12 @@
         <div class="kept-item">
           <div class="ki-tag">Kept</div>
           <h4>Votes aren&rsquo;t for sale</h4>
-          <p>No labor union or special interest buys a council vote from me.</p>
+          <p>No labor union or special interest bought a vote from me.</p>
         </div>
         <div class="kept-item">
           <div class="ki-tag">Kept</div>
           <h4>Independent. Always.</h4>
-          <p>No party, no outside group telling me how to vote.</p>
+          <p>No party, no outside group told me how to vote.</p>
         </div>
         <div class="kept-item">
           <div class="ki-tag">Kept</div>
@@ -720,7 +724,7 @@
         <div class="kept-item">
           <div class="ki-tag">Kept</div>
           <h4>Waiving my salary</h4>
-          <p>Already filed with the City. About $2,152/mo goes back to the General Fund &mdash; details below.</p>
+          <p>Filed with the City before the election. Had I won, about $2,152/mo would have gone back to the General Fund &mdash; details below.</p>
         </div>
         <div class="kept-item">
           <div class="ki-tag">Kept</div>
@@ -738,22 +742,37 @@
     <div class="give-note" style="margin-top:0;">
       <div class="gn-eyebrow">A note from Ricky</div>
       <h3>Your time and your name mean more to me than your money</h3>
-      <p>I'm not asking for your money &mdash; I'm asking for your support. I hope to do what I set out to do on the strength of this community.</p>
-      <p>I wish giving could be anonymous, but the law requires it to be reported &mdash; just like my expenses. I <span class="hl">want</span> it that way. Transparency is the whole point.</p>
-      <p>If I ever recognize a contribution from a developer or anything that looks like a conflict of interest, I'll send it back so I can stay unbiased. And if <span class="hl">you</span> spot a possible conflict, please bring it to my attention so I can address it.</p>
+      <p>I wasn't asking for your money &mdash; I was asking for your support. I hoped to do what I set out to do on the strength of this community.</p>
+      <p>I wish giving could be anonymous, but the law requires it to be reported &mdash; just like my expenses. I <span class="hl">wanted</span> it that way. Transparency was the whole point.</p>
+      <p>If I had ever recognized a contribution from a developer or anything that looked like a conflict of interest, I would have sent it back to stay unbiased. And if <span class="hl">you</span> spot a possible conflict in any campaign, you can look it up yourself in the tracker below.</p>
 
       <div class="waiver">
         <span class="w-tag">Putting my money where my mouth is</span>
-        <h4>I've filed a Partial Salary Waiver with the City of Oceanside</h4>
-        <p>Pursuant to Article I.5, Section 2.1.70(d) of the Oceanside City Code and California Government Code Section 36516(f), I've formally notified the City Treasurer that I'm waiving part of my Council salary.</p>
+        <h4>I filed a Partial Salary Waiver with the City of Oceanside before the election</h4>
+        <p>Pursuant to Article I.5, Section 2.1.70(d) of the Oceanside City Code and California Government Code Section 36516(f), I formally notified the City Treasurer that I would waive part of my Council salary if I won.</p>
         <div class="w-figs">
-          <div class="w-fig"><div class="wf-n">$1,200<span style="font-size:.9rem;">/mo</span></div><div class="wf-l">the most I'll accept in total compensation</div></div>
-          <div class="w-fig"><div class="wf-n">~$2,152<span style="font-size:.9rem;">/mo</span></div><div class="wf-l">waived &amp; returned to the City's General Fund</div></div>
+          <div class="w-fig"><div class="wf-n">$1,200<span style="font-size:.9rem;">/mo</span></div><div class="wf-l">the most I would have accepted in total compensation</div></div>
+          <div class="w-fig"><div class="wf-n">~$2,152<span style="font-size:.9rem;">/mo</span></div><div class="wf-l">would have been waived &amp; returned to the City's General Fund</div></div>
         </div>
-        <p>Oceanside Council compensation runs about <strong style="color:#fff;">$3,352 a month</strong> &mdash; $2,802.49 in base salary, plus roughly $350 for Community Development Commission meetings and about $200 for Harbor District meetings. I'll keep no more than $1,200; the remaining <strong style="color:#fff;">~$2,152 every month</strong> goes, by law, to the General Fund for the City to use at its discretion.</p>
+        <p>Oceanside Council compensation runs about <strong style="color:#fff;">$3,352 a month</strong> &mdash; $2,802.49 in base salary, plus roughly $350 for Community Development Commission meetings and about $200 for Harbor District meetings. I would have kept no more than $1,200; the remaining <strong style="color:#fff;">~$2,152 every month</strong> would have gone, by law, to the General Fund for the City to use at its discretion.</p>
         <a class="letter-link" href="Salary-Waiver-Letter.pdf" target="_blank" rel="noopener">Read the actual letter (PDF)</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- LIVE RESULTS -->
+<section class="results" id="results">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Election Results</div>
+      <h2>How District 2 voted</h2>
+      <p>Live, unofficial results straight from the San Diego County Registrar of Voters. The box shows every race in the county, so tap Filter Races at the top and search for Oceanside to jump to District 2. Ballots are still being counted, so the numbers keep moving until the county certifies them.</p>
+    </div>
+    <div class="results-frame">
+      <iframe src="https://www.livevoterturnout.com/ENR/sandiegocaenr/25/en/Index_25.html" title="San Diego County live election results" loading="lazy" referrerpolicy="no-referrer"></iframe>
+    </div>
+    <p class="results-link"><a href="https://www.livevoterturnout.com/ENR/sandiegocaenr/25/en/Index_25.html" target="_blank" rel="noopener">Open the full results page in a new tab &rarr;</a></p>
   </div>
 </section>
 
@@ -761,9 +780,9 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Transparency</div>
-      <h2>Who's funding the District 2 race</h2>
+      <h2>Who funded the District 2 race</h2>
     </div>
-    <p class="lead">I believe you have a right to know who's funding the people who represent you. Every contribution to every Oceanside campaign is public record &mdash; and you can look it up yourself in seconds.</p>
+    <p class="lead">I believe you have a right to know who's funding the people who represent you. Every contribution to every Oceanside campaign is public record &mdash; and you can look it up yourself in seconds. Below are the five biggest contributors to each campaign.</p>
     <div class="netfile-cta">
       <a href="https://efile.ci.oceanside.ca.us/public/search/campaign?query_string=&amp;state_id=&amp;start_date=2025-08-28&amp;end_date=2026-08-28&amp;filing_types=fppc400,fppc410,fppc425,fppc450,fppc460,fppc461,fppc465,fppc470,fppc496,fppc497,fppc497lcr,fppc497lcm,fppc501&amp;committee_types=Candidate%20or%20Officeholder,Primarily%20Formed%20Candidate,Primarily%20Formed%20Ballot%20Measure,General%20Purpose,Major%20Donor,Independent%20Expenditure,470%20Officeholder,470%20Person,Slate%20Mailer&amp;current_page=1&amp;page_size=10" target="_blank" rel="noopener">Look up any Oceanside campaign filing on the City's eFile system →</a>
     </div>
@@ -774,12 +793,12 @@
       disclosure system (efile.ci.oceanside.ca.us). Bar width = (amount /
       largest value) * 100; "zero"-style rows (small, self-funded candidates)
       are shown at full width with no fill. Robinson 2022 is final/amended
-      and stays fixed. Figures last verified September 25, 2026.
+      and stays fixed. Figures last verified November 6, 2026.
       ===========================================================================
     -->
     <!-- CARD A: live 2026 tracker -->
     <div class="chart-card">
-      <div class="live-badge"><span class="dot"></span> Live tracker &middot; updated November 2, 2026</div>
+      <div class="live-badge"><span class="dot"></span> Tracker &middot; filings through November 2, 2026</div>
       <h3>The 2026 race &mdash; total contributions since each campaign began</h3>
       <div class="sub">District 2, City of Oceanside &middot; every committee opened at a different time, so these are full-campaign totals, not just this calendar year &mdash; includes independent expenditures and in-kind donations alongside direct contributions, reported via the City's eFile system</div>
 
@@ -799,146 +818,51 @@
       </div>
 
       <!-- ROBINSON FULL-CAMPAIGN BREAKDOWN -- donor-by-donor from EVERY filing since the committee was formed 03/06/2025: 214600778 (01/01-06/30/25), 215505013 (07/01-12/31/25), 217118682 (01/01-06/30/26), 1050 (07/01-09/19/26) -->
-      <div class="bd-block">
-        <div class="bd-head"><span class="t">Rick Robinson &mdash; full-campaign breakdown, since 03/06/2025</span></div>
-        <div class="bd-row ie"><span class="nm">Protect Our Quality of Life PAC<span class="tag ie">Independent Expenditure</span><span class="note">Imperial Beach, CA &mdash; campaign literature in support of Robinson: three mailers on 10/06/26 ($632, $1,310, $700) reported on Form 496 Filing ID 1087 (filed 10/07/26), plus a fourth piece on 10/22/26 for $10,326.50, reported on Form 496 Filing ID 1132 (filed 10/23/26), plus $3,600 in texts on 10/30/26, reported on Form 496 Filing ID 1144 (filed 11/02/26). Separate reports for separate pieces, so each one counts. Spent independently, with no coordination with Robinson's committee.</span></span><span class="vv">$16,568.50</span></div>
-        <div class="bd-row ie"><span class="nm">Robinson &mdash; Candidate Loans<span class="tag ie">Loan</span><span class="note">Robinson to his own committee, outstanding &mdash; $4,000 (05/23/25) + $10,000 (06/30/26)</span></span><span class="vv">$14,000.00</span></div>
+            <div class="bd-block">
+        <div class="bd-head"><span class="t">Rick Robinson &mdash; top 5 contributors, since 03/06/2025</span></div>
+        <div class="bd-row ie"><span class="nm">Protect Our Quality of Life PAC<span class="tag ie">Independent Expenditure</span><span class="note">Imperial Beach, CA &mdash; mailers and texts in support of Robinson, reported on Form 496 (Filing IDs 1087, 1132, 1144). Spent independently, with no coordination with Robinson's committee.</span></span><span class="vv">$16,568.50</span></div>
+        <div class="bd-row"><span class="nm">Howard Jacobs<span class="note">Principal, Oceanside-Nevada LP &mdash; 06/25/25</span></span><span class="vv">$5,000.00</span></div>
         <div class="bd-row"><span class="nm">Jeff McDermott<span class="note">Investor, McDermott Investments &mdash; New York, NY &mdash; 10/13/26, reported as a 24-hour contribution</span></span><span class="vv">$5,000.00</span></div>
         <div class="bd-row"><span class="nm">Ashley McDermott<span class="note">Homemaker &mdash; New York, NY &mdash; 10/13/26, reported as a 24-hour contribution and confirmed on his Form 460</span></span><span class="vv">$5,000.00</span></div>
-        <div class="bd-row"><span class="nm">Howard Jacobs<span class="note">Principal, Oceanside-Nevada LP &mdash; 06/25/25</span></span><span class="vv">$5,000.00</span></div>
         <div class="bd-row"><span class="nm">Fred Williamson<span class="note">Williamson Produce &mdash; 06/19/25</span></span><span class="vv">$3,000.00</span></div>
-        <div class="bd-row"><span class="nm">Peter Weiss for City Council 2026<span class="tag">Committee</span><span class="note">08/26/25</span></span><span class="vv">$2,500.00</span></div>
-        <div class="bd-row"><span class="nm">Building A Stronger West<span class="tag">PAC</span><span class="note">Western States Regional Council of Carpenters PAC &mdash; 09/16/26</span></span><span class="vv">$2,500.00</span></div>
-        <div class="bd-row"><span class="nm">California Apartment Association PAC<span class="tag">PAC</span><span class="note">Sacramento, CA &mdash; 10/03/26, reported as a 24-hour contribution</span></span><span class="vv">$2,500.00</span></div>
-        <div class="bd-row"><span class="nm">Oceanside Chamber of Commerce PAC<span class="tag">PAC</span><span class="note">Committee ID 1260474, Oceanside &mdash; 10/05/26, listed on his Form 460 as &ldquo;Oceanside Chamber Advance PAC.&rdquo; A 24-hour report filed 10/01/26 also showed a $2,000 gift, but his Form 460 for the period lists only this one, so it&rsquo;s counted once</span></span><span class="vv">$2,000.00</span></div>
-        <div class="bd-row"><span class="nm">Building Industry Assoc of San Diego Co PAC<span class="tag">PAC</span><span class="note">Committee ID 790708, San Diego, CA &mdash; 10/17/26, reported as a 24-hour contribution</span></span><span class="vv">$1,500.00</span></div>
-        <div class="bd-row ie"><span class="nm">Robinson &mdash; Nonmonetary (In-Kind)<span class="tag ie">In-Kind</span><span class="note">Fundraiser refreshments (George &amp; Kim Murray, Neil &amp; Debbie Nagata, $800 in 2025) + Oceanside Firefighters Association walk cards ($501.52 in 2026)</span></span><span class="vv">$1,301.52</span></div>
-        <div class="bd-row"><span class="nm">Dustin Campbell<span class="note">Campbell Farms &mdash; 10/26/25</span></span><span class="vv">$1,000.00</span></div>
-        <div class="bd-row"><span class="nm">Molly Campbell<span class="note">Campbell Farms &mdash; 10/30/25</span></span><span class="vv">$1,000.00</span></div>
-        <div class="bd-row"><span class="nm">Mike Ogden<span class="note">10/30/25</span></span><span class="vv">$1,000.00</span></div>
-        <div class="bd-row"><span class="nm">Donal Yasikochi<span class="note">Yasikochi Family Farm &mdash; 10/30/25</span></span><span class="vv">$1,000.00</span></div>
-        <div class="bd-row"><span class="nm">Lynn Jepsen<span class="note">06/26/25 &amp; 11/03/25</span></span><span class="vv">$1,000.00</span></div>
-        <div class="bd-row"><span class="nm">Avalon Mgt. Group, Inc.<span class="note">08/03/26</span></span><span class="vv">$1,000.00</span></div>
-        <div class="bd-row"><span class="nm">California Real Estate PAC<span class="tag">PAC</span><span class="note">08/13/26, reported as a 24-hour late contribution</span></span><span class="vv">$1,000.00</span></div>
-        <div class="bd-row"><span class="nm">San Diego Electrical Contractors PAC<span class="tag">PAC</span><span class="note">Committee ID 802088, San Diego, CA &mdash; 10/22/26, reported as a 24-hour contribution</span></span><span class="vv">$1,000.00</span></div>
-        <div class="bd-row"><span class="nm">Debra Dugan<span class="note">06/30/25 &amp; 09/21/26, $500 each</span></span><span class="vv">$1,000.00</span></div>
-        <div class="bd-row"><span class="nm">Terry Johnson<span class="note">06/26/25 &amp; 10/14/25</span></span><span class="vv">$750.00</span></div>
-        <div class="bd-row"><span class="nm">John Franklin for Central Committee 2024<span class="tag">Committee</span><span class="note">06/18/25</span></span><span class="vv">$500.00</span></div>
-        <div class="bd-row"><span class="nm">Jim Myers<span class="note">06/30/25</span></span><span class="vv">$500.00</span></div>
-        <div class="bd-row"><span class="nm">Craig Wickman<span class="note">08/22/25</span></span><span class="vv">$500.00</span></div>
-        <div class="bd-row"><span class="nm">David Fischbach<span class="note">CEO, Beachfront Only Vacation Rentals &mdash; 10/30/25</span></span><span class="vv">$500.00</span></div>
-        <div class="bd-row"><span class="nm">William Birnie<span class="note">Frontwave Credit Union &mdash; 09/10/26</span></span><span class="vv">$500.00</span></div>
-        <div class="bd-row"><span class="nm">Sally Sporrer<span class="note">08/18/26</span></span><span class="vv">$500.00</span></div>
-        <div class="bd-row"><span class="nm">Dawna &amp; Jon Corn<span class="note">Del Mar / Cardiff by the Sea &mdash; 02/25/26, $250 each</span></span><span class="vv">$500.00</span></div>
-        <div class="bd-row"><span class="nm">Ward Lewis<span class="note">Investor, Lewis Real Estate Investments &mdash; Oceanside &mdash; 10/05/26</span></span><span class="vv">$500.00</span></div>
-        <div class="bd-row"><span class="nm">Jerry Harder<span class="note">06/26/25 &amp; 12/08/25</span></span><span class="vv">$400.00</span></div>
-        <div class="bd-row"><span class="nm">Rick Robinson<span class="note">Self &mdash; transferred from his 2022 committee, 03/27/25</span></span><span class="vv">$308.37</span></div>
-        <div class="bd-row"><span class="nm">Vickie Prosser<span class="note">06/26/25</span></span><span class="vv">$300.00</span></div>
-        <div class="bd-row"><span class="nm">Tom Morrissey<span class="note">Morrissey Construction Company &mdash; 10/30/25</span></span><span class="vv">$300.00</span></div>
-        <div class="bd-row"><span class="nm">Laura Bassett<span class="note">06/26/25</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Ken Altman<span class="note">Chairman, Altman Specialty Plants &mdash; 09/22/25</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Louise Balma<span class="note">10/09/25</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">David Heering<span class="note">10/26/25</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Donna Cleary<span class="note">California State Legislature staff &mdash; 10/30/25</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Hugh Dykes<span class="note">VP Community Development, Frontwave Credit Union &mdash; 10/30/25</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Tonya Danielly<span class="note">Executive Director, Ivy Ranch Park Assoc. &mdash; 12/22/25</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Jeffrey Cavignac<span class="note">Insurance sales, San Diego &mdash; 02/20/26</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Michelle Goldberg<span class="note">Utility design consultant, Carlsbad &mdash; 02/23/26</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Troy Reist<span class="note">Geologist, San Diego &mdash; 02/23/26</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Ryan Keim for Mayor 2024<span class="tag">Committee</span><span class="note">06/09/26</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Bruce Howe<span class="note">08/26/26</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Jon Corn<span class="note">Lawyer, Aannestad, Andelin &amp; Corn Attorneys &mdash; Cardiff by the Sea &mdash; 09/30/26 (separate from the joint gift with Dawna above)</span></span><span class="vv">$249.00</span></div>
-        <div class="bd-row"><span class="nm">Beverley Shapiro<span class="note">06/17/25 &amp; 08/26/26</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Joe Valenti Jr.<span class="note">06/19/25 &amp; 10/12/25</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Jerry Kern<span class="note">06/26/25</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Colleen O'Harra<span class="note">06/26/25</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Patti Siegmann<span class="note">06/26/25 &amp; 10/30/25</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">John Todd<span class="note">09/09/26</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row other"><span class="nm">Contributions of $100 or less<span class="note">Bruce May, Diane Holloway, Jordan Marks, and smaller gifts, plus a small filing-reconciliation difference</span></span><span class="vv">$620.00</span></div>
+        <div class="bd-row other"><span class="nm">All other contributions<span class="note">Everyone else, including $14,000 in candidate loans, a $1,301.52 in-kind donation, and all smaller gifts</span></span><span class="vv">$46,428.89</span></div>
         <div class="bd-grand combined"><span class="nm">Total Contributions &mdash; since 03/06/2025</span><span class="vv">$80,997.39</span></div>
-        <p class="bd-note">Cash on hand: $28,450.16, straight from his committee's own ending-cash-balance line as of 10/17/26 (his most recent Form 460), not an estimate. This is Robinson's committee's ENTIRE fundraising history, not just this calendar year &mdash; his "Re-Elect Rick Robinson City Council 2026" committee filed its Form 410 on 03/06/2025, more than a year before mine, and had already raised $27,818.37 by the end of 2025. Direct-contribution figures pulled from all five of his Form 460s (214600778, 215505013, 217118682, 1050, 1123) plus Form 497 24-hour reports: Filing ID 1067 (filed 10/03/26, $2,500 from the California Apartment Association PAC), Filing ID 1079 (filed 10/05/26, $2,000 from the Oceanside Chamber committee, filed as &ldquo;Oceanside Chamber Advance PAC&rdquo;), Filing ID 1101 (filed 10/13/26, $5,000 from Jeff McDermott, an investor at McDermott Investments, and $5,000 from Ashley McDermott, listed as a homemaker, same New York address, same day), Filing ID 1109 (filed 10/17/26, $1,500 from the Building Industry Association of San Diego County PAC), and Filing ID 1128 (filed 10/22/26, $1,000 from the San Diego Electrical Contractors PAC). His latest Form 460 (Filing ID 1123, covering 09/20&ndash;10/17/26) lists $17,359 in contributions for that period. Two earlier 24-hour reports did not hold up against it: Filing ID 1064 (10/01/26) showed a $2,000 Chamber gift that isn&rsquo;t on the 460 (only the 10/05/26 one is), and Filing ID 1095 (10/13/26) showed a separate $5,900 from Ashley McDermott that isn&rsquo;t on the 460 either (only her $5,000 is). Both have been taken out of his total. The 460 also added a second $500 gift from Debra Dugan, a new $249 gift from Jon Corn on his own, and $500 from a new donor, Ward Lewis &mdash; everything else in that filing (the Chamber PAC, Apartment Association PAC, McDermotts, and Building Industry PAC gifts) had already been added here from its own 24-hour report. The rows highlighted in green above &mdash; his candidate loans, an in-kind donation, and the independent expenditure &mdash; aren't ordinary monetary contributions, so they're called out separately even though they're folded into the Total Contributions figure. The independent expenditure is pulled from Form 496 filings by Protect Our Quality of Life (Imperial Beach): $2,642 in campaign literature mailed 10/06/26 (Filing ID 1087, filed 10/07/26), then a separate $10,326.50 mailer on 10/22/26 (Filing ID 1132, filed 10/23/26), then $3,600 in texts on 10/30/26 (Filing ID 1144, filed 11/02/26), for $16,568.50 in all. The 10/23 report calls $10,326.50 its &ldquo;cumulative&rdquo; total, but that is the amount of its one new line item, and it lists the candidate as &ldquo;Rick Robinson&rdquo; where the first report said &ldquo;Richard Robinson,&rdquo; so the two expenses are added together here. Spent on its own, with no coordination with Robinson's committee. We'll keep updating that line as more come in.</p>
+        <p class="bd-note">Cash on hand: $28,450.16 as of 10/17/26, straight from his committee's own Form 460. The total is his committee's full history since it opened on 03/06/2025. Two 24-hour reports (Filing IDs 1064 and 1095) showed gifts that never appeared on his Form 460, so they were left out. The green row isn't an ordinary monetary contribution: it's independent spending by an outside group, made on its own with no coordination with his committee. Sources: his Form 460s plus Form 497 and 496 reports on the City's eFile system, through 11/02/26.</p>
       </div>
 
       <!-- GONZALES FULL-CAMPAIGN BREAKDOWN -- donor-by-donor from EVERY filing since the committee was formed: 215560084 (12/03-12/31/25), 217113002 (01/01-06/30/26), 1049 (07/01-09/19/26) -->
-      <div class="bd-block">
-        <div class="bd-head"><span class="t">Emily Gonzales &mdash; full-campaign breakdown, since 11/12/2025</span></div>
+            <div class="bd-block">
+        <div class="bd-head"><span class="t">Emily Gonzales &mdash; top 5 contributors, since 11/12/2025</span></div>
         <div class="bd-row"><span class="nm">Progressive Labor Alliance<span class="tag">PAC</span><span class="note">Sacramento, CA &mdash; 09/27/26, reported as a 24-hour late contribution</span></span><span class="vv">$5,000.00</span></div>
         <div class="bd-row"><span class="nm">San Diego Democratic Party<span class="tag">PAC</span><span class="note">San Diego, CA &mdash; 10/10/26, reported as a 24-hour contribution</span></span><span class="vv">$3,000.00</span></div>
         <div class="bd-row"><span class="nm">Future Democrats PAC<span class="tag">PAC</span><span class="note">Washington, DC &mdash; 03/27/26</span></span><span class="vv">$1,900.00</span></div>
         <div class="bd-row"><span class="nm">Kenneth Dalpe<span class="note">Oceanside &mdash; recurring donor, $100 gifts throughout 2026</span></span><span class="vv">$1,900.00</span></div>
-        <div class="bd-row ie"><span class="nm">Gonzales &mdash; Candidate Loan<span class="tag ie">Loan</span><span class="note">Gonzales to her own committee, via The Collective Consultancy &mdash; 12/26/25</span></span><span class="vv">$1,000.00</span></div>
         <div class="bd-row"><span class="nm">Larry Warner<span class="note">Oceanside &mdash; recurring donor, throughout 2026</span></span><span class="vv">$900.00</span></div>
-        <div class="bd-row"><span class="nm">Steven Burrell<span class="note">Retired, Oceanside &mdash; 03/07/26</span></span><span class="vv">$800.00</span></div>
-        <div class="bd-row"><span class="nm">Diane Nygaard<span class="note">Oceanside &mdash; 03/07/26 &amp; 09/04/26</span></span><span class="vv">$800.00</span></div>
-        <div class="bd-row"><span class="nm">Democratic Club of Carlsbad Oceanside<span class="note">02/28/26</span></span><span class="vv">$800.00</span></div>
-        <div class="bd-row"><span class="nm">Daniel Dominguez<span class="note">Retired, Oceanside &mdash; 03/07/26</span></span><span class="vv">$800.00</span></div>
-        <div class="bd-row"><span class="nm">McCarty for Mayor 2028<span class="tag">Committee</span><span class="note">Sacramento &mdash; 07/20/26</span></span><span class="vv">$750.00</span></div>
-        <div class="bd-row"><span class="nm">Emily Gonzales<span class="note">Candidate self-fund/offset &mdash; 06/30/26</span></span><span class="vv">$621.82</span></div>
-        <div class="bd-row ie"><span class="nm">Nonmonetary (In-Kind)<span class="tag ie">In-Kind</span><span class="note">democrats.com (Bob Fertik) &mdash; email list to Oceanside activists</span></span><span class="vv">$524.60</span></div>
-        <div class="bd-row"><span class="nm">Sarah Maiani<span class="note">Artist, Santa Barbara &mdash; 01/10/26</span></span><span class="vv">$500.00</span></div>
-        <div class="bd-row"><span class="nm">OMHA &mdash; Oceanside Manufactured Homeowners Alliance<span class="note">06/26/26 &amp; 07/30/26</span></span><span class="vv">$500.00</span></div>
-        <div class="bd-row"><span class="nm">Mica Hashimoto<span class="note">Chief Financial Officer, The Swell Collective &mdash; 03/15/26 &amp; 08/18/26</span></span><span class="vv">$500.00</span></div>
-        <div class="bd-row"><span class="nm">Tina Valin<span class="note">Oceanside &mdash; 04/02/26</span></span><span class="vv">$500.00</span></div>
-        <div class="bd-row"><span class="nm">Kim Stone<span class="note">Retired, Oceanside &mdash; 02/13, 06/22, 07/24, 08/26 &amp; 09/24/26</span></span><span class="vv">$500.00</span></div>
-        <div class="bd-row"><span class="nm">Karen Glover<span class="note">Professor, CSU San Marcos &mdash; 03/08 &amp; 06/16/26</span></span><span class="vv">$400.00</span></div>
-        <div class="bd-row"><span class="nm">Mike Tenhover<span class="note">Oceanside &mdash; 07/09 &amp; 09/15/26</span></span><span class="vv">$400.00</span></div>
-        <div class="bd-row"><span class="nm">Tim Cooke<span class="note">Not Employed, Bonsall &mdash; 10/07/26</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Carol Broeland<span class="note">Not Employed, Oceanside &mdash; 10/15/26</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Kyle Krahel-Frolander<span class="note">District Director, U.S. House of Representatives &mdash; 05/13/26</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Brian Simmons, OFS<span class="note">Marina, CA &mdash; 01/02/26</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Mathew Meyer<span class="note">Retired, Vista &mdash; 09/28/26</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Barbara Collins<span class="note">Managing Director, ERH West &mdash; Oceanside &mdash; 10/02/26</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Debra Wanamaker<span class="note">Oceanside &mdash; 10/15/26</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Mike Bullock<span class="note">Oceanside &mdash; 03/09/26</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Ann Campbell<span class="note">Retired, Davis &mdash; 05/29/26</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Michelle Lustig<span class="note">Ed. Admin, LACOE &mdash; 03/07/26</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Dennis Martinek<span class="note">Fallbrook &mdash; 03/08/26</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Shelly Parker<span class="note">Retired, Oceanside &mdash; 03/07/26</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Judy Stone<span class="note">Retired, Oceanside &mdash; 03/31/26</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">The Carol H. McCall Trust<span class="note">Oceanside &mdash; 08/18/26</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Dino Gregorich<span class="note">IT consultant, Oceanside &mdash; 05/31/26</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Jill Laughlin<span class="note">RN, Davita Healthcare Partners &mdash; recurring, throughout 2026</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Leticia Madril<span class="note">Oceanside, self-employed &mdash; recurring, throughout 2026</span></span><span class="vv">$200.00</span></div>
-        <div class="bd-row"><span class="nm">Amber Niuatoa<span class="note">Professor, MiraCosta &mdash; 09/09/26</span></span><span class="vv">$111.00</span></div>
-        <div class="bd-row"><span class="nm">Dale Disharoon<span class="note">Not Employed, Oceanside &mdash; 10/09/26</span></span><span class="vv">$100.00</span></div>
-        <div class="bd-row"><span class="nm">Mike Ruiz<span class="note">Not Employed, Bakersfield &mdash; 10/15/26</span></span><span class="vv">$100.00</span></div>
-        <div class="bd-row"><span class="nm">Emily Gonzales<span class="note">Candidate seed money, before 2026 &mdash; 12/13/25 &amp; 12/23/25</span></span><span class="vv">$55.00</span></div>
-        <div class="bd-row other"><span class="nm">Contributions of $100 or less<span class="note">Michele Cyr, Mike Kosec, John MacDowell, Valarie McCourtney, Chris Waidelich, Ron Dwyer-Voss, Lesa Thode, Warren Troy, Amanda-Dawn Natalia, and smaller gifts</span></span><span class="vv">$2,251.91</span></div>
+        <div class="bd-row other"><span class="nm">All other contributions<span class="note">Everyone else, including a $1,000 candidate loan, a $524.60 in-kind donation, and all smaller gifts</span></span><span class="vv">$15,614.33</span></div>
         <div class="bd-grand combined"><span class="nm">Total Contributions &mdash; since 11/12/2025</span><span class="vv">$28,314.33</span></div>
-        <p class="bd-note">Cash on hand: $14,614.75, straight from her committee's own ending-cash-balance line as of 10/17/26 (her most recent Form 460), not an estimate anymore. Gonzales's committee filed its Form 410 on 12/15/2025, about two and a half months before mine, so this is close to a calendar-year total &mdash; the only pre-2026 activity was $55 in seed contributions and the $1,000 loan in December 2025. The rows highlighted in green above &mdash; her candidate loan and an in-kind donation &mdash; aren't ordinary monetary contributions, so they're called out separately even though they're folded into the Total Contributions figure. Pulled from all four of her Form 460s (215560084, 217113002, 1049, 1133) plus Form 497 24-hour reports: Filing ID 1057 (received 09/27/26, filed 09/28/26) for the $5,000 Progressive Labor Alliance contribution, and Filing ID 1088 (received and filed 10/10/26) for the $3,000 San Diego Democratic Party contribution &mdash; both confirmed on her latest Form 460 (Filing ID 1133, covering 09/20&ndash;10/17/26), which also added $1,800 in smaller gifts: a second $100 from Kenneth Dalpe, a second $50 from Larry Warner, a second $25 from Jill Laughlin, a second $50 from Leticia Madril, a fifth $100 from Kim Stone, and new gifts from Mathew Meyer, Barbara Collins, Tim Cooke, Dale Disharoon, Mike Ruiz, Debra Wanamaker, Carol Broeland, and Michele Cyr.</p>
+        <p class="bd-note">Cash on hand: $14,614.75 as of 10/17/26, straight from her committee's own Form 460. The total is her committee's full history since it opened (Form 410 filed 12/15/2025). Sources: her Form 460s plus Form 497 24-hour reports on the City's eFile system, through 10/17/26.</p>
       </div>
 
       <!-- JAMES 2026 BREAKDOWN (my own committee, FPPC ID 1491965) -->
-      <div class="bd-block">
-        <div class="bd-head"><span class="t">Ricky James &mdash; full-campaign breakdown, since committee formed 2026</span></div>
+            <div class="bd-block">
+        <div class="bd-head"><span class="t">Ricky James &mdash; top 5 contributors, since committee formed 2026</span></div>
         <div class="bd-row"><span class="nm">Roy Green<span class="note">Father-in-Law &mdash; Huntington Beach</span></span><span class="vv">$1,200.00</span></div>
         <div class="bd-row"><span class="nm">Chance Hardy<span class="note">Owner, Hardy Window Company &mdash; Placentia</span></span><span class="vv">$1,000.00</span></div>
         <div class="bd-row"><span class="nm">Rick &amp; Tina James<span class="note">My parents</span></span><span class="vv">$500.00</span></div>
         <div class="bd-row"><span class="nm">Five Star Holdings Investments, Inc.<span class="note">Oceanside &mdash; $250 on 09/28/26 and $250 on 10/05/26</span></span><span class="vv">$500.00</span></div>
-        <div class="bd-row"><span class="nm">Kyle Carruthers, Maria Melissa Larish, Steven Bauer<span class="note">Three new $100 gifts, received 08/24/26</span></span><span class="vv">$300.00</span></div>
         <div class="bd-row ie"><span class="nm">OsideBBC.com Podcast<span class="tag ie">In-Kind</span><span class="note">8 political ads on the Big Buccaneer Channel podcast</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row"><span class="nm">Rose Higuera<span class="note">Oceanside &mdash; 09/25/26</span></span><span class="vv">$100.00</span></div>
-        <div class="bd-row other"><span class="nm">All other contributors under $100</span><span class="vv">$524.24</span></div>
+        <div class="bd-row other"><span class="nm">All other contributions<span class="note">Everyone else, including three $100 gifts and all contributors under $100</span></span><span class="vv">$924.24</span></div>
         <div class="bd-grand combined"><span class="nm">Total Contributions &mdash; since committee formed</span><span class="vv">$4,374.24</span></div>
-        <p class="bd-note">Cash on hand: -$7.10 (my committee spent more than it had on hand this period &mdash; mostly P2P texting costs &mdash; and I'm watching that closely). My $100 personal seed loan to the campaign has since been repaid in full. My committee didn't exist before this year, so this figure is already a true full-campaign total.</p>
+        <p class="bd-note">Cash on hand: -$7.10 (my committee spent more than it had on hand, mostly on P2P texting). My $100 personal seed loan has been repaid in full. My committee didn't exist before this year, so this is a true full-campaign total. The green row is an in-kind donation, not cash.</p>
       </div>
 
       <div class="pac-track">
-        <div class="t">Tracking the 2026 cycle</div>
-        <p>We monitor the active District 2 candidates &mdash; <strong>Rick Robinson</strong>, <strong>Emily Gonzales</strong>, and my own committee &mdash; along with the PACs active in the race, capturing monetary and nonmonetary contributions, loans, and late-contribution reports as they post to the City of Oceanside's eFile system. The three committees didn't start on the same day: Robinson's opened 03/06/2025, Gonzales's opened 11/12/2025, and mine opened in 2026, so a fair comparison has to total each one's full history rather than just this calendar year &mdash; that's what's shown above. The totals above are each candidate's Total Contributions &mdash; everything that's come into their committee: donors, PACs, and committees, plus candidate loans, in-kind donations, and any independent expenditures reported in their support. Candidate loans, in-kind donations, and independent expenditures aren't ordinary monetary contributions, so they're highlighted in green within each contribution list even though they're folded into the total &mdash; that's $14,000 in outstanding loans for Robinson and $1,000 for Gonzales. Figures above are pulled from every Form 460 each committee has filed since it opened, through each candidate's most recent report &mdash; Robinson's covering through 10/17/26 and Gonzales's covering through 10/17/26 as well &mdash; plus any Form 497 24-hour late-contribution reports filed since. Gonzales's latest 460 confirmed her $5,000 Progressive Labor Alliance gift and $3,000 San Diego Democratic Party gift (both already captured from their own 24-hour reports) and added $1,800 in smaller individual gifts on top. Robinson's latest activity added a second Protect Our Quality of Life PAC mailer. We also track independent expenditures &mdash; money outside groups spend on their own supporting or opposing a candidate, reported on Form 496 and never coordinated with the candidate's own committee. So far that's just Robinson: Protect Our Quality of Life PAC, which has now spent $16,568.50 supporting him: $2,642 in literature reported 10/07/26, another $10,326.50 in literature reported 10/23/26, and $3,600 in texts reported 11/02/26. We expect more of these as the race heats up and will keep this running.</p>
+        <div class="t">How these numbers were tracked</div>
+        <p>We tracked the District 2 candidates &mdash; <strong>Rick Robinson</strong>, <strong>Emily Gonzales</strong>, and my own committee &mdash; along with the PACs active in the race, using the City of Oceanside's eFile system. The three committees didn't start on the same day (Robinson's opened 03/06/2025, Gonzales's 11/12/2025, mine in 2026), so these are full-campaign totals, not just this calendar year. Total Contributions is everything that came into a committee: donors, PACs, and committees, plus candidate loans, in-kind donations, and independent expenditures made in the candidate's support. Loans, in-kind donations, and independent expenditures aren't ordinary monetary contributions, so they're called out in green where they show up. Campaign filings continue after Election Day, so final numbers may differ slightly.</p>
       </div>
 
       <p class="chart-source">
-        My campaign has raised $4,374.24 since my committee was formed &mdash; including $500 from my parents, Rick and Tina James,
-        $1,200 from a retiree in Huntington Beach, $1,000 from a small-business owner in Placentia, three new
-        $100 gifts in late August, a $250 in-kind podcast-ad donation, $500 from Five Star Holdings Investments
-        in two gifts, and a new $100 gift from Rose Higuera. My $100 personal seed loan has
-        since been repaid in full. I don't solicit contributions, and I pledge not to take money from
-        developers, vendors, PACs, or any interest seeking to advance an agenda. Robinson's
-        re-election committee, which has been raising money since March 2025, has reported $80,997.39 in total
-        contributions since it formed (including $14,000 in candidate loans, a $1,301.52 in-kind donation, $16,568.50 in independent expenditures reported in his support, $2,000 from the Oceanside Chamber PAC plus $2,500 from the California Apartment Association reported between October 3 and October 5, 2026, $10,000 reported October 13, 2026 from a New York family named McDermott, $1,500 from the Building Industry Association of San Diego County PAC reported October 17, 2026, and $1,359 more from his latest filing covering through October 17, 2026, between the three new named gifts above and a handful of small-dollar donations under $100, plus $1,000 from the San Diego Electrical Contractors PAC reported October 22, 2026). Gonzales's committee,
-        open since November 2025, has reported $28,314.33 in total contributions since it formed, including a $5,000 contribution from the Progressive Labor Alliance reported September 27, 2026 and a $3,000 contribution from the San Diego Democratic Party reported October 10, 2026.
-        All figures above come from every Form 460 each candidate's committee has filed to date.
+        Figures come from every Form 460 and 24-hour report each committee filed, through each candidate's most recent filing on the City's eFile system. I didn't solicit contributions, and I pledged not to take money from developers, vendors, PACs, or any interest seeking to advance an agenda.
       </p>
     </div>
 
@@ -955,17 +879,14 @@
 
       <!-- 2022 BREAKDOWN -->
       <div class="bd-block">
-        <div class="bd-head"><span class="t">2022 breakdown</span></div>
+        <div class="bd-head"><span class="t">2022 top contributors</span></div>
         <div class="bd-row"><span class="nm">Oceanside Firefighters Association PAC<span class="tag">PAC · independent expenditures</span><span class="note">Sched. D/E/G IEs: mailers, digital ads, walk cards, texts, postage</span></span><span class="vv">$39,862.70</span></div>
         <div class="bd-row"><span class="nm">Oceanside Police Officers' Association<span class="tag">PAC</span><span class="note">$1,000 monetary + independent-expenditure printing &amp; mailing</span></span><span class="vv">$21,947.39</span></div>
         <div class="bd-row"><span class="nm">Howard Jacobs / GK Asset Management<span class="note">Developer &mdash; &ldquo;Sunsets&rdquo; micro-apartment project</span></span><span class="vv">$4,900.00</span></div>
         <div class="bd-row"><span class="nm">Shantu Patel<span class="note">Developer &mdash; former Flying Bridge project</span></span><span class="vv">$1,000.00</span></div>
         <div class="bd-row"><span class="nm">Waste Management<span class="note">City refuse-franchise hauler</span></span><span class="vv">$1,000.00</span></div>
         <div class="bd-row"><span class="nm">David Fischbach / Blue Curl LLC<span class="note">Short-term-rental operator (Beachfront Only Rentals)</span></span><span class="vv">$1,000.00</span></div>
-        <div class="bd-row"><span class="nm">Neal Nagata / Nagata Brothers LLC<span class="note">Farming landowner</span></span><span class="vv">$500.00</span></div>
-        <div class="bd-row"><span class="nm">Joe Valenti / North Coast Village<span class="note">Vacation-rental operator</span></span><span class="vv">$400.00</span></div>
-        <div class="bd-row"><span class="nm">Dustin Campbell<span class="note">Tied to a cannabis-cultivation permit application (Sleeping Indian Rd)</span></span><span class="vv">$250.00</span></div>
-        <div class="bd-row other"><span class="nm">All other contributors</span><span class="vv">$15,519.39</span></div>
+        <div class="bd-row other"><span class="nm">All other contributors</span><span class="vv">$16,669.39</span></div>
         <div class="bd-row tot"><span class="nm">2022 total</span><span class="vv">$86,379.48</span></div>
       </div>
 
@@ -984,7 +905,7 @@
 <!-- WHY YOUR VOTE MATTERS -->
 <section class="turnout">
   <div class="wrap">
-    <div class="eyebrow">Why your vote matters</div>
+    <div class="eyebrow">Why every vote counts</div>
     <h2>In 2022, the District 2 seat was decided by just <span class="gold">817 votes</span>.</h2>
     <p class="t-lead">This is a small, close district &mdash; a handful of engaged neighbors genuinely decide who represents you.</p>
     <div class="turnout-stats">
@@ -1015,35 +936,6 @@
 
 <script>
   function closeMenu(){document.getElementById('menu').classList.remove('open');}
-
-  // Live countdown to when the polls close on Election Day (Nov 3, 2026, 8:00 PM Pacific = 04:00 UTC Nov 4).
-  (function(){
-    var close = Date.UTC(2026, 10, 4, 4, 0, 0);
-    var txt = document.getElementById('ebTxt');
-    var clock = document.getElementById('ebClock');
-    if(!txt || !clock) return;
-    function pad(n){ return n < 10 ? '0' + n : '' + n; }
-    function unit(n, l){ return '<span class="eb-unit">' + n + '<small>' + l + '</small></span>'; }
-    function tick(){
-      var ms = close - Date.now();
-      if(ms <= 0){
-        txt.textContent = 'The polls are closed. Thank you, District 2.';
-        clock.className = 'eb-clock';
-        clock.innerHTML = '';
-        var lk = document.getElementById('ebLink'); if(lk) lk.style.display = 'none';
-        return false;
-      }
-      var s = Math.floor(ms / 1000);
-      var d = Math.floor(s / 86400); s -= d * 86400;
-      var h = Math.floor(s / 3600);  s -= h * 3600;
-      var m = Math.floor(s / 60);    s -= m * 60;
-      txt.textContent = d >= 1 ? 'Polls close Tuesday, Nov. 3 at 8 PM in:' : 'Election Day is here. Polls close at 8 PM in:';
-      clock.innerHTML = unit(d, 'days') + unit(pad(h), 'hrs') + unit(pad(m), 'min') + unit(pad(s), 'sec');
-      clock.className = 'eb-clock on';
-      return true;
-    }
-    if(tick()){ var t = setInterval(function(){ if(!tick()) clearInterval(t); }, 1000); }
-  })();
 
   // The form POSTs to the campaign's Google Form via the hidden iframe, so the
   // visitor stays on this page. We show the thank-you message right after submit.
